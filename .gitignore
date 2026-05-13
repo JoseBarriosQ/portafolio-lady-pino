@@ -25,6 +25,7 @@ pnpm-debug.log*
 # Claude Code / agente local — config interna que no se versiona
 .claude/
 CLAUDE.md
+PROGRESS.md
 barry-skills/
 generate-doc.js
 Plan-Implementacion-Portafolio-Lady.docx
