@@ -1966,33 +1966,33 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
 }
 
 /* 5. Stagger reveal — fade-in al entrar al viewport (solo con .anim-ready, garantía visibilidad sin JS) */
-.anim-ready .reveal {
+:global(.anim-ready) .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .reveal.is-visible {
+:global(.anim-ready) .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.anim-ready .reveal:nth-child(1) { transition-delay: 0s; }
-.anim-ready .reveal:nth-child(2) { transition-delay: 0.08s; }
-.anim-ready .reveal:nth-child(3) { transition-delay: 0.16s; }
-.anim-ready .reveal:nth-child(4) { transition-delay: 0.24s; }
-.anim-ready .reveal:nth-child(5) { transition-delay: 0.32s; }
+:global(.anim-ready) .reveal:nth-child(1) { transition-delay: 0s; }
+:global(.anim-ready) .reveal:nth-child(2) { transition-delay: 0.08s; }
+:global(.anim-ready) .reveal:nth-child(3) { transition-delay: 0.16s; }
+:global(.anim-ready) .reveal:nth-child(4) { transition-delay: 0.24s; }
+:global(.anim-ready) .reveal:nth-child(5) { transition-delay: 0.32s; }
 
 /* 6. Líneas decorativas con drawing animation (solo con anim-ready) */
-.anim-ready .contexto-title-line,
-.anim-ready .fricciones-title-line,
-.anim-ready .objetivos-title-line,
-.anim-ready .proceso-title-line,
-.anim-ready .insights-title-line,
-.anim-ready .redisenio-title-line,
-.anim-ready .mejoras-title-line,
-.anim-ready .impacto-mach-title-line,
-.anim-ready .sistema-title-line,
-.anim-ready .conclusion-mach-title-line {
+:global(.anim-ready) .contexto-title-line,
+:global(.anim-ready) .fricciones-title-line,
+:global(.anim-ready) .objetivos-title-line,
+:global(.anim-ready) .proceso-title-line,
+:global(.anim-ready) .insights-title-line,
+:global(.anim-ready) .redisenio-title-line,
+:global(.anim-ready) .mejoras-title-line,
+:global(.anim-ready) .impacto-mach-title-line,
+:global(.anim-ready) .sistema-title-line,
+:global(.anim-ready) .conclusion-mach-title-line {
   width: 0;
   transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.15s;

@@ -416,47 +416,47 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID || '';
 }
 
 /* 2. Drawing line del título de página
-   Patrón progressive-enhancement: SOLO cuando body tiene .anim-ready (lo agrega el script al cargar)
+   Patrón progressive-enhancement: SOLO cuando body tiene :global(.anim-ready)(lo agrega el script al cargar)
    se ocultan los elementos para hacer fade-in. Si JS falla, todo es visible por default. */
-.anim-ready .page-title-line {
+:global(.anim-ready) .page-title-line {
   width: 0;
   transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.2s;
 }
-.anim-ready .page-title-group.is-visible .page-title-line {
+:global(.anim-ready) .page-title-group.is-visible .page-title-line {
   width: 219px;
 }
 @media (max-width: 900px) {
-  .anim-ready .page-title-group.is-visible .page-title-line { width: 96px; }
+  :global(.anim-ready) .page-title-group.is-visible .page-title-line { width: 96px; }
 }
 @media (max-width: 600px) {
-  .anim-ready .page-title-group.is-visible .page-title-line { width: 64px; }
+  :global(.anim-ready) .page-title-group.is-visible .page-title-line { width: 64px; }
 }
 
 /* 3. Page-title fade-in */
-.anim-ready .page-title {
+:global(.anim-ready) .page-title {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .page-title-group.is-visible .page-title {
+:global(.anim-ready) .page-title-group.is-visible .page-title {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* 4. Bio section — fade-in con stagger (foto + texto) */
-.anim-ready .bio__photo,
-.anim-ready .bio__text > * {
+:global(.anim-ready) .bio__photo,
+:global(.anim-ready) .bio__text > * {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .bio.is-visible .bio__photo { opacity: 1; transform: translateY(0); transition-delay: 0s; }
-.anim-ready .bio.is-visible .bio__text > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
-.anim-ready .bio.is-visible .bio__text > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-.anim-ready .bio.is-visible .bio__text > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+:global(.anim-ready) .bio.is-visible .bio__photo { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+:global(.anim-ready) .bio.is-visible .bio__text > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+:global(.anim-ready) .bio.is-visible .bio__text > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+:global(.anim-ready) .bio.is-visible .bio__text > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
 
 /* 5. Foto bio hover sutil */
 .bio__photo img {
@@ -479,34 +479,34 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID || '';
 }
 
 /* 7. Bio-extra fade-in con stagger por párrafo (solo si JS cargó las animaciones) */
-.anim-ready .bio-extra > * {
+:global(.anim-ready) .bio-extra > * {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .bio-extra.is-visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
-.anim-ready .bio-extra.is-visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
-.anim-ready .bio-extra.is-visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-.anim-ready .bio-extra.is-visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
-.anim-ready .bio-extra.is-visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+:global(.anim-ready) .bio-extra.is-visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+:global(.anim-ready) .bio-extra.is-visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+:global(.anim-ready) .bio-extra.is-visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+:global(.anim-ready) .bio-extra.is-visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+:global(.anim-ready) .bio-extra.is-visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
 
 /* 8. CTA Contact — fade-in stagger (solo si JS cargó las animaciones) */
-.anim-ready .cta-contact__title,
-.anim-ready .cta-contact__subtitle,
-.anim-ready .contact__form,
-.anim-ready .cta-contact__icons,
-.anim-ready .cta-contact__credits {
+:global(.anim-ready) .cta-contact__title,
+:global(.anim-ready) .cta-contact__subtitle,
+:global(.anim-ready) .contact__form,
+:global(.anim-ready) .cta-contact__icons,
+:global(.anim-ready) .cta-contact__credits {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .cta-contact.is-visible .cta-contact__title { opacity: 1; transform: translateY(0); transition-delay: 0s; }
-.anim-ready .cta-contact.is-visible .cta-contact__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
-.anim-ready .cta-contact.is-visible .contact__form { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-.anim-ready .cta-contact.is-visible .cta-contact__icons { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
-.anim-ready .cta-contact.is-visible .cta-contact__credits { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+:global(.anim-ready) .cta-contact.is-visible .cta-contact__title { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+:global(.anim-ready) .cta-contact.is-visible .cta-contact__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+:global(.anim-ready) .cta-contact.is-visible .contact__form { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+:global(.anim-ready) .cta-contact.is-visible .cta-contact__icons { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+:global(.anim-ready) .cta-contact.is-visible .cta-contact__credits { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
 
 /* 9. Inputs focus glow */
 .form-group input,

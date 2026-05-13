@@ -344,27 +344,27 @@ import LogoLady from '../components/LogoLady.astro';
 /* 1. Línea decorativa del hero — drawing animation
    Progressive-enhancement: las animaciones reveal solo aplican cuando .anim-ready
    está en <body> (lo agrega el script al cargar). Sin JS, el contenido es visible. */
-.anim-ready .hero__line {
+:global(.anim-ready) .hero__line {
   width: 0;
   transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.2s;
 }
-.anim-ready .hero__title-group.is-visible .hero__line {
+:global(.anim-ready) .hero__title-group.is-visible .hero__line {
   width: 100px;
 }
 
 /* 2. Hero text — fade in con stagger */
-.anim-ready .hero__text > *,
-.anim-ready .hero__photo {
+:global(.anim-ready) .hero__text > *,
+:global(.anim-ready) .hero__photo {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .hero.is-visible .hero__title-group { opacity: 1; transform: translateY(0); transition-delay: 0s; }
-.anim-ready .hero.is-visible .hero__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
-.anim-ready .hero.is-visible .hero__actions { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
-.anim-ready .hero.is-visible .hero__photo { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+:global(.anim-ready) .hero.is-visible .hero__title-group { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+:global(.anim-ready) .hero.is-visible .hero__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+:global(.anim-ready) .hero.is-visible .hero__actions { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+:global(.anim-ready) .hero.is-visible .hero__photo { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
 
 /* 3. Polaroid hover — sutil lift + scale */
 .hero__polaroid {
@@ -391,29 +391,29 @@ import LogoLady from '../components/LogoLady.astro';
 }
 
 /* 5. Projects section title — reveal */
-.anim-ready .projects__title,
-.anim-ready .projects__subtitle {
+:global(.anim-ready) .projects__title,
+:global(.anim-ready) .projects__subtitle {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .projects.is-visible .projects__title { opacity: 1; transform: translateY(0); transition-delay: 0s; }
-.anim-ready .projects.is-visible .projects__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+:global(.anim-ready) .projects.is-visible .projects__title { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+:global(.anim-ready) .projects.is-visible .projects__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
 
 /* 6. Project cards — hover lift + image zoom + reveal stagger */
-.anim-ready .project-card {
+:global(.anim-ready) .project-card {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.4s ease;
 }
-.anim-ready .project-card.is-visible {
+:global(.anim-ready) .project-card.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.anim-ready .project-card.is-visible:hover {
+:global(.anim-ready) .project-card.is-visible:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 80px rgba(112, 144, 176, 0.22);
 }

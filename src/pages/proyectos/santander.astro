@@ -1154,55 +1154,55 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
 }
 
 /* 4. Stagger reveal — fade-in al entrar al viewport */
-/* Progressive enhancement: opacity:0 solo cuando body tiene .anim-ready (JS cargó OK).
+/* Progressive enhancement: opacity:0 solo cuando body tiene :global(.anim-ready)(JS cargó OK).
    Sin JS, todo el contenido es visible por default — no más cards vacías en mobile. */
-.anim-ready .reveal {
+:global(.anim-ready) .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .reveal.is-visible {
+:global(.anim-ready) .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.anim-ready .reveal:nth-child(1) { transition-delay: 0s; }
-.anim-ready .reveal:nth-child(2) { transition-delay: 0.08s; }
-.anim-ready .reveal:nth-child(3) { transition-delay: 0.16s; }
-.anim-ready .reveal:nth-child(4) { transition-delay: 0.24s; }
-.anim-ready .reveal:nth-child(5) { transition-delay: 0.32s; }
+:global(.anim-ready) .reveal:nth-child(1) { transition-delay: 0s; }
+:global(.anim-ready) .reveal:nth-child(2) { transition-delay: 0.08s; }
+:global(.anim-ready) .reveal:nth-child(3) { transition-delay: 0.16s; }
+:global(.anim-ready) .reveal:nth-child(4) { transition-delay: 0.24s; }
+:global(.anim-ready) .reveal:nth-child(5) { transition-delay: 0.32s; }
 
 /* 5. Líneas decorativas con drawing animation (solo con anim-ready) */
-.anim-ready .desafio-title-line,
-.anim-ready .objetivos-title-line,
-.anim-ready .enfoque-title-line,
-.anim-ready .insights-title-line,
-.anim-ready .analisis-title-line,
-.anim-ready .propuesta-title-line,
-.anim-ready .impacto-title-line,
-.anim-ready .conclusion-title-line {
+:global(.anim-ready) .desafio-title-line,
+:global(.anim-ready) .objetivos-title-line,
+:global(.anim-ready) .enfoque-title-line,
+:global(.anim-ready) .insights-title-line,
+:global(.anim-ready) .analisis-title-line,
+:global(.anim-ready) .propuesta-title-line,
+:global(.anim-ready) .impacto-title-line,
+:global(.anim-ready) .conclusion-title-line {
   width: 0;
   transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: 0.15s;
 }
-.anim-ready .title-line-reveal.is-visible .desafio-title-line,
-.anim-ready .title-line-reveal.is-visible .objetivos-title-line,
-.anim-ready .title-line-reveal.is-visible .enfoque-title-line,
-.anim-ready .title-line-reveal.is-visible .insights-title-line,
-.anim-ready .title-line-reveal.is-visible .analisis-title-line,
-.anim-ready .title-line-reveal.is-visible .propuesta-title-line,
-.anim-ready .title-line-reveal.is-visible .impacto-title-line,
-.anim-ready .title-line-reveal.is-visible .conclusion-title-line {
+:global(.anim-ready) .title-line-reveal.is-visible .desafio-title-line,
+:global(.anim-ready) .title-line-reveal.is-visible .objetivos-title-line,
+:global(.anim-ready) .title-line-reveal.is-visible .enfoque-title-line,
+:global(.anim-ready) .title-line-reveal.is-visible .insights-title-line,
+:global(.anim-ready) .title-line-reveal.is-visible .analisis-title-line,
+:global(.anim-ready) .title-line-reveal.is-visible .propuesta-title-line,
+:global(.anim-ready) .title-line-reveal.is-visible .impacto-title-line,
+:global(.anim-ready) .title-line-reveal.is-visible .conclusion-title-line {
   width: 96px;
 }
 
 /* 6. Funnel bars con width animation (solo con anim-ready) */
-.anim-ready .funnel-stage__bar {
+:global(.anim-ready) .funnel-stage__bar {
   transform-origin: left center;
   transform: scaleX(0);
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.anim-ready .funnel-stage__bar.is-visible {
+:global(.anim-ready) .funnel-stage__bar.is-visible {
   transform: scaleX(1);
 }
 
@@ -1258,14 +1258,14 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
 }
 /* También sobreescribir el width de drawing-line cuando is-visible — sino vuelve a 96px */
 @media (max-width: 600px) {
-  .anim-ready .title-line-reveal.is-visible .desafio-title-line,
-  .anim-ready .title-line-reveal.is-visible .objetivos-title-line,
-  .anim-ready .title-line-reveal.is-visible .enfoque-title-line,
-  .anim-ready .title-line-reveal.is-visible .insights-title-line,
-  .anim-ready .title-line-reveal.is-visible .analisis-title-line,
-  .anim-ready .title-line-reveal.is-visible .propuesta-title-line,
-  .anim-ready .title-line-reveal.is-visible .impacto-title-line,
-  .anim-ready .title-line-reveal.is-visible .conclusion-title-line {
+  :global(.anim-ready) .title-line-reveal.is-visible .desafio-title-line,
+  :global(.anim-ready) .title-line-reveal.is-visible .objetivos-title-line,
+  :global(.anim-ready) .title-line-reveal.is-visible .enfoque-title-line,
+  :global(.anim-ready) .title-line-reveal.is-visible .insights-title-line,
+  :global(.anim-ready) .title-line-reveal.is-visible .analisis-title-line,
+  :global(.anim-ready) .title-line-reveal.is-visible .propuesta-title-line,
+  :global(.anim-ready) .title-line-reveal.is-visible .impacto-title-line,
+  :global(.anim-ready) .title-line-reveal.is-visible .conclusion-title-line {
     width: 56px;
   }
 }
