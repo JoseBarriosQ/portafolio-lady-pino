@@ -1,0 +1,485 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+import LogoLady from '../components/LogoLady.astro';
+---
+
+<BaseLayout activePage="proyectos">
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero__inner container">
+      <div class="hero__text">
+        <div class="hero__title-group">
+          <span class="hero__line"></span>
+          <h1 class="hero__title">Product Designer &amp; UX Specialist</h1>
+        </div>
+        <p class="hero__subtitle">
+          <strong>Diseño experiencias que conectan, funcionan y convierten.</strong>
+          Soy Lady Pino Especialista en UX, CRO y analítica. Transformo datos en
+          decisiones de producto que generan resultados reales.
+        </p>
+        <div class="hero__actions">
+          <a href="#proyectos" class="btn-primary">Proyectos</a>
+          <a href="/sobre-mi" class="btn-outline">Acerca de mi</a>
+        </div>
+      </div>
+      <div class="hero__photo">
+        <div class="hero__polaroid">
+          <img src="/assets/ladyGirasoles.png" alt="Lady Pino" class="hero__img" />
+          <div class="hero__firma-wrap">
+            <LogoLady height="120px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROYECTOS ── -->
+  <section class="projects" id="proyectos">
+    <div class="container">
+      <h2 class="projects__title">Explora mi trabajo</h2>
+      <p class="projects__subtitle">
+        He trabajado en distintos proyectos digitales, enfocándome en experiencias B2B y B2C.
+        Mi especialidad está en transformar ideas en productos claros, funcionales y alineados
+        con la estrategia de cada marca.
+      </p>
+
+      <!-- Card 1: Santander -->
+      <div class="project-card" style="background: linear-gradient(180deg, #FFC0C2 0%, #FFFFFF 100%);">
+        <div class="project-card__text">
+          <h3 class="project-card__title">Optimización de conversión en seguros digitales</h3>
+          <p class="project-card__client">Banco Santander</p>
+          <p class="project-card__desc">
+            Mejoré la eficiencia del funnel de contratación mediante análisis de datos,
+            rediseño de experiencia y optimización CRO, aumentando la calidad de entrada
+            y la conversión.
+          </p>
+          <a href="/proyectos/santander" class="btn-outline">Ver caso</a>
+        </div>
+        <div class="project-card__image">
+          <img src="/assets/mockupSantander.png" alt="Proyecto Banco Santander" />
+        </div>
+      </div>
+
+      <!-- Card 2: MACH -->
+      <div class="project-card project-card--reverse" style="background: linear-gradient(180deg, #C4B8FF 0%, #FFFFFF 100%);">
+        <div class="project-card__image">
+          <img src="/assets/mockupMatch.png" alt="Proyecto MACH Fintech" />
+        </div>
+        <div class="project-card__text">
+          <h3 class="project-card__title">Rediseño experiencia de beneficios y engagement</h3>
+          <p class="project-card__client">MACH (Fintech)</p>
+          <p class="project-card__desc">
+            Optimicé el descubrimiento y uso de beneficios, mejorando la activación
+            de usuarios y la interacción dentro de la app.
+          </p>
+          <a href="/proyectos/mach" class="btn-outline">Ver caso</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Comida para Todos -->
+      <div class="project-card" style="background: linear-gradient(180deg, #FFCBA4 0%, #FFFFFF 100%);">
+        <div class="project-card__text">
+          <h3 class="project-card__title">Plataforma digital para acceso a ayuda alimentaria</h3>
+          <p class="project-card__client">Comida para todos (Fundación sin fines de lucro)</p>
+          <p class="project-card__desc">
+            Diseñé una experiencia accesible para conectar personas con ayuda alimentaria,
+            enfocada en claridad, confianza y facilidad de uso.
+          </p>
+          <a href="/proyectos/comida-para-todos" class="btn-outline">Ver caso</a>
+        </div>
+        <div class="project-card__image">
+          <img src="/assets/mockupComidaParaTodos.png" alt="Proyecto Comida para Todos" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>
+
+<style>
+/* ── Hero ── */
+.hero {
+  padding: 40px 0 80px;
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 60px;
+  align-items: center;
+  max-width: min(1600px, 92vw);
+  margin: 0 auto;
+  padding: 0 60px;
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* B-H3 — línea a la izquierda del título, siempre alineada con la 1ª línea del título ("Product") */
+.hero__title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.hero__line {
+  flex-shrink: 0;
+  width: 100px;
+  height: 2px;
+  background-color: #A4665C;
+  border-radius: 2px;
+  /* Centro vertical de la 1ª línea del h1 = font-size * line-height / 2 = 40 * 1.7 / 2 = 34px */
+  margin-top: 34px;
+}
+
+.hero__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+.hero__subtitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: #766F6D;
+  padding-left: 116px;
+}
+.hero__subtitle strong {
+  font-weight: 500;
+  font-size: 26px;
+  color: #766F6D;
+}
+.hero__actions {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding-left: 116px;
+}
+
+/* columna foto */
+.hero__photo {
+  width: 100%;
+  max-width: 380px;
+  margin-left: auto;
+}
+
+/* polaroid frame */
+.hero__polaroid {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 12px 40px 12px;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.10);
+  width: 100%;
+}
+.hero__img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 6px;
+  display: block;
+}
+
+/* firma overlay sobre la imagen */
+.hero__firma-wrap {
+  position: absolute;
+  bottom: -72px;
+  right: -48px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 24px;
+  }
+  /* Disolver .hero__text para que sus hijos sean items directos del grid del .hero__inner.
+     Permite reordenar la foto entre título y subtítulo solo en mobile sin tocar el HTML. */
+  .hero__text {
+    display: contents;
+  }
+  .hero__title-group { order: 1; }
+  .hero__photo {
+    order: 2;
+    max-width: 360px;
+    /* margin-bottom extra: la firma "Lady Pino" sobresale ~72px bajo el polaroid, así no tapa el subtítulo */
+    margin: 0 auto 72px;
+  }
+  .hero__subtitle {
+    order: 3;
+    padding-left: 0;
+  }
+  .hero__actions {
+    order: 4;
+    padding-left: 0;
+    flex-wrap: nowrap;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 32px 0 60px;
+  }
+  /* Foto más pequeña para que la firma "Lady Pino" (que sobresale right: -48px del polaroid)
+     no se corte por el borde derecho del viewport. */
+  .hero__photo {
+    max-width: 280px;
+  }
+}
+
+/* === Projects responsive — mobile: cards en 1 col + ocultar imágenes de los productos === */
+@media (max-width: 900px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+  .project-card__image {
+    display: none;
+  }
+}
+
+/* ── Projects ── */
+.projects {
+  padding: 48px 0 60px;
+  background-color: #ffffff;
+}
+.projects__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: #A4665C;
+  margin-bottom: 16px;
+}
+.projects__subtitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: #766F6D;
+  max-width: none;
+  margin-bottom: 48px;
+}
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 80px;
+  min-height: 320px;
+  box-shadow: 0px 6px 64px 0px #7090B01A;
+}
+.project-card__text {
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+.project-card__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 43px;
+  letter-spacing: 0;
+  color: #545454;
+}
+.project-card__client {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #7F7F7F;
+}
+.project-card__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #686868;
+}
+.project-card__image {
+  overflow: hidden;
+  min-height: 100%;
+}
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.project-card--reverse .project-card__text { order: 2; }
+.project-card--reverse .project-card__image { order: 1; }
+
+.project-card .btn-outline {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* ============================================================
+   ANIMATIONS — Home (hero + projects + buttons)
+   ============================================================ */
+
+/* 1. Línea decorativa del hero — drawing animation
+   Progressive-enhancement: las animaciones reveal solo aplican cuando .anim-ready
+   está en <body> (lo agrega el script al cargar). Sin JS, el contenido es visible. */
+.anim-ready .hero__line {
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+.anim-ready .hero__title-group.is-visible .hero__line {
+  width: 100px;
+}
+
+/* 2. Hero text — fade in con stagger */
+.anim-ready .hero__text > *,
+.anim-ready .hero__photo {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .hero.is-visible .hero__title-group { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.anim-ready .hero.is-visible .hero__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+.anim-ready .hero.is-visible .hero__actions { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+.anim-ready .hero.is-visible .hero__photo { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+
+/* 3. Polaroid hover — sutil lift + scale */
+.hero__polaroid {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero__polaroid:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 16px 48px rgba(164, 102, 92, 0.18);
+}
+
+/* 4. Botones hero — refined hover */
+.hero__actions .btn-primary,
+.hero__actions .btn-outline {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.hero__actions .btn-primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(164, 102, 92, 0.30);
+}
+.hero__actions .btn-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(164, 102, 92, 0.18);
+}
+
+/* 5. Projects section title — reveal */
+.anim-ready .projects__title,
+.anim-ready .projects__subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .projects.is-visible .projects__title { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.anim-ready .projects.is-visible .projects__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+
+/* 6. Project cards — hover lift + image zoom + reveal stagger */
+.anim-ready .project-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease;
+}
+.anim-ready .project-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.anim-ready .project-card.is-visible:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 80px rgba(112, 144, 176, 0.22);
+}
+/* Hover básico sin animaciones reveal (degradación graceful) */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 80px rgba(112, 144, 176, 0.22);
+}
+.project-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.project-card__image img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-card:hover .project-card__image img {
+  transform: scale(1.06);
+}
+
+/* 7. Project card button hover refinado */
+.project-card .btn-outline {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.project-card .btn-outline:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(84, 84, 84, 0.18);
+}
+</style>
+
+<script is:inline>
+  // ============================================================
+  // Animation observer — Home (hero + projects)
+  // ============================================================
+  const initHomeAnimations = () => {
+    // Progressive enhancement: las animaciones reveal solo aplican si IntersectionObserver
+    // está disponible y JS corre OK. Si JS falla, body NO tiene .anim-ready y el contenido
+    // se ve normal sin opacity: 0 inicial (definido en CSS con .anim-ready prefix).
+    if (!('IntersectionObserver' in window)) return;
+    document.body.classList.add('anim-ready');
+
+    const targets = document.querySelectorAll('.hero, .hero__title-group, .projects, .project-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+
+    targets.forEach((el) => observer.observe(el));
+
+    // Fallback: si IO no dispara en 1.5s, forzar visibilidad
+    setTimeout(() => {
+      targets.forEach((el) => {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
+          observer.unobserve(el);
+        }
+      });
+    }, 1500);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHomeAnimations);
+  } else {
+    initHomeAnimations();
+  }
+</script>

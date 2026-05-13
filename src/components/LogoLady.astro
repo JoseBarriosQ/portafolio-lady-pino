@@ -1,0 +1,22 @@
+---
+interface Props {
+  height?: string;
+}
+const { height = '48px' } = Astro.props;
+---
+
+<!-- viewBox recorta el espacio en blanco de la PNG — muestra solo la firma -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="310 255 700 330"
+  style={`height: ${height}; width: auto; display: block;`}
+  role="img"
+  aria-label="Lady Pino"
+>
+  <image
+    href="/assets/FirmaLadyPino.png"
+    width="1318"
+    height="920"
+    style="mix-blend-mode: multiply"
+  />
+</svg>

@@ -1,0 +1,194 @@
+---
+import LogoLady from './LogoLady.astro';
+const { activePage = '' } = Astro.props;
+---
+
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a href="/" class="navbar__logo">
+      <LogoLady height="48px" />
+    </a>
+
+    <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="navbar__links">
+      <li><a href="/#proyectos" class:list={['navbar__link', { active: activePage === 'proyectos' }]}>PROYECTOS</a></li>
+      <li><a href="/sobre-mi"   class:list={['navbar__link', { active: activePage === 'sobre-mi' }]}>ACERCA DE MI</a></li>
+      <li><a href="/sobre-mi#contacto" class:list={['navbar__link', { active: activePage === 'contacto' }]}>CONTACTO</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+.navbar {
+  background-color: var(--color-bg);
+  position: relative;
+  z-index: 100;
+}
+
+.navbar__inner {
+  width: 100%;
+  height: 97px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.navbar__link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4665C;
+  transition: color 0.2s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-heading);
+  transition: width 0.2s ease;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  color: var(--color-heading);
+}
+
+.navbar__link:hover::after,
+.navbar__link.active::after {
+  width: 100%;
+}
+
+/* ── Hamburger ── */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navbar__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-heading);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* ── Tablet (transición gradual) ── */
+@media (max-width: 1024px) {
+  .navbar__inner {
+    padding: 0 32px;
+    height: 80px;
+  }
+  .navbar__logo img {
+    height: 40px;
+  }
+  .navbar__links {
+    gap: 28px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .navbar__inner {
+    padding: 14px 24px;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 12px 0 16px;
+  }
+
+  .navbar__links.open {
+    display: flex;
+  }
+
+  .navbar__links li {
+    border-top: 1px solid rgba(139, 58, 42, 0.08);
+  }
+
+  .navbar__link {
+    display: block;
+    padding: 12px 4px;
+  }
+
+  .navbar__link::after {
+    display: none;
+  }
+
+  /* Hamburguer → X */
+  .navbar__toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .navbar__toggle.open span:nth-child(2) { opacity: 0; }
+  .navbar__toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (max-width: 480px) {
+  .navbar__inner {
+    padding: 12px 16px;
+  }
+
+  .navbar__logo img {
+    width: 110px;
+  }
+}
+</style>
+
+<script>
+  const toggle = document.querySelector('.navbar__toggle');
+  const links  = document.querySelector('.navbar__links');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = links?.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Cerrar al hacer click en un link
+  links?.querySelectorAll('.navbar__link').forEach(link => {
+    link.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle?.classList.remove('open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

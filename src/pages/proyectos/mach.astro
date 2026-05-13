@@ -1,0 +1,2106 @@
+---
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+---
+
+<CaseStudyLayout
+  titleHTML={`Rediseño de <em class="case-hero__title-highlight case-hero__title-highlight--accent">beneficios</em> <em class="case-hero__title-highlight case-hero__title-highlight--regular">y engagement</em>`}
+  description="Optimización del descubrimiento y uso de beneficios dentro de la app para mejorar la activación y retención de usuarios."
+  client="MACH Fintech"
+  role="UX-UI Designer"
+  duration="Fintech"
+  durationLabel="TIPO"
+  focus="CRO / UX / Engagement"
+  heroImage="/assets/CapturaMatch.png"
+  heroImageAlt="Stack de pantallas de la app MACH Fintech"
+  floatingCardLabel="Activación semanal"
+  floatingCardValue="+28% uso"
+  accentColor="#E8D5FF"
+  headingColor="#A4665C"
+  highlightColor="#A4665C"
+  brightColor="#841AFF"
+  heroBackground="linear-gradient(180deg, #E8D5FF 0%, #FFFFFF 100%)"
+  pageSlug="mach"
+>
+
+  <!-- El Contexto -->
+  <section class="case-section contexto-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label contexto-label">01 - CONTEXTO</span>
+      <div class="contexto-title-group">
+        <span class="contexto-title-line"></span>
+        <h2 class="contexto-title">El <em>Contexto</em></h2>
+      </div>
+      <p class="contexto-desc">Los usuarios no descubrían ni utilizaban los beneficios disponibles dentro de la app, generando baja activación y poco engagement.</p>
+
+      <div class="contexto-cards">
+        <article class="contexto-card">
+          <span class="contexto-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <h4>Bajo descubrimiento</h4>
+          <p>Los beneficios estaban enterrados en la navegación. La mayoría de usuarios no sabía que existían.</p>
+        </article>
+        <article class="contexto-card">
+          <span class="contexto-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </span>
+          <h4>Baja activación</h4>
+          <p>Los usuarios que encontraban la sección no completaban el proceso de activación por su alta fricción.</p>
+        </article>
+        <article class="contexto-card">
+          <span class="contexto-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <h4>Información poco visible</h4>
+          <p>La jerarquía visual no destacaba el valor real de cada beneficio. Todo lucía igual de importante.</p>
+        </article>
+        <article class="contexto-card">
+          <span class="contexto-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </span>
+          <h4>Experiencia fragmentada</h4>
+          <p>El flujo era inconsistente: distintos estilos, distintas lógicas. Sin cohesión entre las secciones.</p>
+        </article>
+      </div>
+
+      <div class="contexto-grid">
+        <!-- Col izquierda: cita -->
+        <aside class="contexto-quote-card">
+          <p class="contexto-quote">"MACH ofrece múltiples beneficios de alto valor, pero su descubrimiento y activación no era evidente para los usuarios. El producto existía, la experiencia fallaba."</p>
+          <p class="contexto-quote__author">— Diagnóstico inicial del proyecto</p>
+        </aside>
+
+        <!-- Col derecha: 3 stats apilados -->
+        <div class="contexto-stats">
+          <article class="contexto-stat">
+            <span class="contexto-stat__number">4.2M</span>
+            <div class="contexto-stat__body">
+              <strong>usuarios activos en MACH</strong>
+              <p>con acceso a beneficios sin saberlo</p>
+            </div>
+          </article>
+          <article class="contexto-stat">
+            <span class="contexto-stat__number">73%</span>
+            <div class="contexto-stat__body">
+              <strong>de usuarios</strong>
+              <p>nunca había navegado a la sección de beneficios</p>
+            </div>
+          </article>
+          <article class="contexto-stat">
+            <span class="contexto-stat__number">68%</span>
+            <div class="contexto-stat__body">
+              <strong>tasa de abandono</strong>
+              <p>en el flujo de activación de beneficios</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fricciones -->
+  <section class="case-section fricciones-section" style="background-color: #F3F0FF;">
+    <div class="case-section__inner">
+      <span class="section-label fricciones-label">02 - EL PROBLEMA</span>
+      <div class="fricciones-title-group">
+        <span class="fricciones-title-line"></span>
+        <h2 class="fricciones-title">Fricciones que <em>bloqueaban</em> el uso</h2>
+      </div>
+      <p class="fricciones-desc">El problema no estaba en los beneficios — estaba en cómo se presentaban, encontraban y activaban dentro de la app.</p>
+
+      <div class="fricciones-grid">
+        <article class="fricciones-card">
+          <span class="fricciones-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <h4>Baja visibilidad de beneficios</h4>
+          <p>Los beneficios estaban enterrados en la navegación. La mayoría de usuarios no los encontraba sin una búsqueda activa.</p>
+        </article>
+        <article class="fricciones-card">
+          <span class="fricciones-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </span>
+          <h4>Baja activación</h4>
+          <p>Quienes llegaban a la sección no completaban la activación. El flujo tenía demasiados pasos y poca claridad sobre el valor obtenido.</p>
+        </article>
+        <article class="fricciones-card">
+          <span class="fricciones-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </span>
+          <h4>Navegación poco intuitiva</h4>
+          <p>No había jerarquía entre beneficios activos, nuevos y por vencer. Todo lucía igual de importante, por lo que nada destacaba.</p>
+        </article>
+        <article class="fricciones-card">
+          <span class="fricciones-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
+          <h4>Desconexión entre valor y experiencia</h4>
+          <p>Los beneficios eran valiosos, pero la app no comunicaba ese valor. El usuario no entendía qué ganaba ni cómo aprovecharlo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objetivos -->
+  <section class="case-section objetivos-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label objetivos-label">03 - DIRECCIÓN</span>
+      <div class="objetivos-title-group">
+        <span class="objetivos-title-line"></span>
+        <h2 class="objetivos-title">Objetivos del <em>proyecto</em></h2>
+      </div>
+
+      <div class="objetivos-grid">
+        <article class="objetivos-card">
+          <span class="objetivos-card__num">01</span>
+          <p>Aumentar el uso activo de beneficios por usuario</p>
+        </article>
+        <article class="objetivos-card">
+          <span class="objetivos-card__num">02</span>
+          <p>Mejorar el descubrimiento desde el flujo principal</p>
+        </article>
+        <article class="objetivos-card">
+          <span class="objetivos-card__num">03</span>
+          <p>Reducir la fricción en el proceso de activación</p>
+        </article>
+        <article class="objetivos-card">
+          <span class="objetivos-card__num">04</span>
+          <p>Aumentar el engagement y retención en app</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="case-section proceso-section" style="background: linear-gradient(180deg, rgba(237, 232, 255, 0.5) 0%, #FFFFFF 100%);">
+    <div class="case-section__inner">
+      <span class="section-label proceso-label">04 - METODOLOGÍA</span>
+      <div class="proceso-title-group">
+        <span class="proceso-title-line"></span>
+        <h2 class="proceso-title">Proceso de <em>trabajo</em></h2>
+      </div>
+      <p class="proceso-desc">La investigación reveló patrones consistentes que explicaban el comportamiento de abandono de los usuarios.</p>
+
+      <div class="proceso-flow">
+        <article class="proceso-step">
+          <span class="proceso-step__circle">01</span>
+          <h4 class="proceso-step__title">Investigación</h4>
+          <p class="proceso-step__desc">Análisis de datos de uso, entrevistas con usuarios y benchmark de apps fintech referentes.</p>
+        </article>
+        <article class="proceso-step">
+          <span class="proceso-step__circle">02</span>
+          <h4 class="proceso-step__title">Análisis</h4>
+          <p class="proceso-step__desc">Mapeo de flujos actuales, identificación de puntos de quiebre y definición de hipótesis.</p>
+        </article>
+        <article class="proceso-step">
+          <span class="proceso-step__circle">03</span>
+          <h4 class="proceso-step__title">Diseño</h4>
+          <p class="proceso-step__desc">Wireframes, componentes y prototipos de alta fidelidad. Revisión con producto y negocio.</p>
+        </article>
+        <article class="proceso-step">
+          <span class="proceso-step__circle">04</span>
+          <h4 class="proceso-step__title">Validación</h4>
+          <p class="proceso-step__desc">Testing con usuarios reales, ajustes iterativos y medición post-lanzamiento.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights del research -->
+  <section class="case-section insights-section">
+    <div class="case-section__inner">
+      <span class="section-label insights-label">05 - HALLAZGOS</span>
+      <div class="insights-title-group">
+        <span class="insights-title-line"></span>
+        <h2 class="insights-title">Insight del <em>research</em></h2>
+      </div>
+
+      <div class="insights-grid">
+        <article class="insights-card">
+          <span class="insights-card__num">INSIGHT 01</span>
+          <h4>Falta de visibilidad en el home</h4>
+          <p>Los beneficios no aparecían en el flujo principal. El 73% de usuarios nunca hacía scroll hasta encontrar la sección, simplemente porque no sabía que existía.</p>
+        </article>
+        <article class="insights-card">
+          <span class="insights-card__num">INSIGHT 02</span>
+          <h4>Mala jerarquía de información</h4>
+          <p>Todos los beneficios lucían igual: mismo peso visual, sin distinción entre activos, nuevos y expirados. El usuario no podía priorizar qué revisar.</p>
+        </article>
+        <article class="insights-card">
+          <span class="insights-card__num">INSIGHT 03</span>
+          <h4>Baja percepción de valor</h4>
+          <p>La propuesta de valor de cada beneficio no era clara desde la lista. El usuario necesitaba activar para entender qué obtenía, lo que generaba desconfianza.</p>
+        </article>
+        <article class="insights-card">
+          <span class="insights-card__num">INSIGHT 04</span>
+          <h4>Navegación poco clara</h4>
+          <p>No había un camino evidente entre descubrir, entender y activar un beneficio. El flujo tenía bifurcaciones innecesarias que perdían al usuario.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rediseño / Propuesta -->
+  <section class="case-section redisenio-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label redisenio-label">06 - PROPUESTA</span>
+      <div class="redisenio-title-group">
+        <span class="redisenio-title-line"></span>
+        <h2 class="redisenio-title">Rediseño de la <em>experiencia</em></h2>
+      </div>
+      <p class="redisenio-desc">Se rediseñó el flujo priorizando claridad, reducción de fricción y mejor jerarquía de información. Cada decisión de diseño respondía a un dato del análisis previo.</p>
+
+      <div class="redisenio-grid">
+        <!-- Col izquierda: 4 decisiones -->
+        <div class="redisenio-decisions">
+          <article class="redisenio-decision">
+            <span class="redisenio-decision__num">DECISIÓN 01</span>
+            <h4>Beneficios en el home</h4>
+            <p>Módulo integrado en la pantalla principal con los beneficios más relevantes para el perfil de cada usuario. Ya no es necesario buscarlo.</p>
+          </article>
+          <article class="redisenio-decision">
+            <span class="redisenio-decision__num">DECISIÓN 02</span>
+            <h4>Categorías y filtros claros</h4>
+            <p>Sistema de pestañas por tipo de beneficio (cashback, descuentos, viajes). El usuario llega en un toque a lo que busca.</p>
+          </article>
+          <article class="redisenio-decision">
+            <span class="redisenio-decision__num">DECISIÓN 03</span>
+            <h4>Estado visual por beneficio</h4>
+            <p>Cada ítem muestra su estado (nuevo, activo, por vencer) con badges de color. La jerarquía orienta la acción sin esfuerzo.</p>
+          </article>
+          <article class="redisenio-decision">
+            <span class="redisenio-decision__num">DECISIÓN 04</span>
+            <h4>Activación en 2 pasos</h4>
+            <p>El flujo pasó de 5 pantallas a 2. La propuesta de valor se muestra antes de pedir cualquier acción, reduciendo la fricción al mínimo.</p>
+          </article>
+        </div>
+
+        <!-- Col derecha: imagen única -->
+        <div class="redisenio-images">
+          <img src="/assets/RediseñoMatch.png" alt="Rediseño MACH" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mejoras UX -->
+  <section class="case-section mejoras-section" style="background: #FAFAFC;">
+    <!-- Onda decorativa top — gris #E6E3EA con curvas T smooth, tendencia ascendente (izq baja → der alta) -->
+    <svg class="mejoras-wave mejoras-wave--tr" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,0 L1440,0 L1440,80 Q1200,130 960,90 T480,110 T0,130 Z" fill="#E6E3EA"/>
+    </svg>
+    <!-- Onda decorativa bottom — morado vibrante #841AFF21 con loma sutil izq, valle medio, loma grande der (ascendente, match Figma) -->
+    <svg class="mejoras-wave mejoras-wave--bl" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,200 L1440,200 L1440,60 Q1100,40 900,120 Q700,150 480,130 Q240,110 0,150 Z" fill="#841AFF" fill-opacity="0.13"/>
+    </svg>
+
+    <div class="case-section__inner">
+      <span class="section-label mejoras-label">07 - MEJORAS UX</span>
+      <div class="mejoras-title-group">
+        <span class="mejoras-title-line"></span>
+        <h2 class="mejoras-title">Cambios que <em>impactaron</em> el uso</h2>
+      </div>
+
+      <div class="mejoras-grid">
+        <article class="mejoras-card">
+          <span class="mejoras-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </span>
+          <h4>Nueva jerarquía visual</h4>
+          <p>Tipografía, colores y tamaños diseñados para guiar la mirada hacia las acciones correctas en cada pantalla.</p>
+        </article>
+        <article class="mejoras-card">
+          <span class="mejoras-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </span>
+          <h4>Mejor arquitectura</h4>
+          <p>Reestructura completa del mapa de navegación. Cada sección tiene un propósito claro y una ruta de entrada directa.</p>
+        </article>
+        <article class="mejoras-card">
+          <span class="mejoras-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </span>
+          <h4>CTAs claros</h4>
+          <p>Texto de botones orientado a la acción concreta. "Activar beneficio" en lugar de "Continuar" o "Siguiente".</p>
+        </article>
+        <article class="mejoras-card">
+          <span class="mejoras-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+          <h4>Navegación optimizada</h4>
+          <p>Acceso desde el home en 1 toque. Se eliminaron los niveles de navegación innecesarios que alargaban el camino al usuario.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impacto -->
+  <section class="case-section impacto-mach-section" style="background-color: #EDE8FF;">
+    <div class="case-section__inner impacto-mach-inner">
+      <span class="section-label impacto-mach-label">08 - IMPACTO</span>
+      <div class="impacto-mach-title-group">
+        <span class="impacto-mach-title-line"></span>
+        <h2 class="impacto-mach-title">Impacto en <em>métricas</em></h2>
+      </div>
+      <p class="impacto-mach-desc">Métricas medidas 4 semanas post-lanzamiento en producción.</p>
+
+      <div class="impacto-mach-grid">
+        <article class="impacto-mach-card">
+          <span class="impacto-mach-card__number">+28%</span>
+          <p class="impacto-mach-card__label">Uso activo de beneficios por usuario</p>
+          <span class="impacto-mach-card__badge">Objetivo superado</span>
+        </article>
+        <article class="impacto-mach-card">
+          <span class="impacto-mach-card__number">+18%</span>
+          <p class="impacto-mach-card__label">Tasa de activación de beneficios</p>
+          <span class="impacto-mach-card__badge">Meta alcanzada</span>
+        </article>
+        <article class="impacto-mach-card">
+          <span class="impacto-mach-card__number">−15%</span>
+          <p class="impacto-mach-card__label">Fricción en navegación de beneficios</p>
+          <span class="impacto-mach-card__badge">Flujo optimizado</span>
+        </article>
+        <article class="impacto-mach-card">
+          <span class="impacto-mach-card__number">+22%</span>
+          <p class="impacto-mach-card__label">Retención de usuarios en app</p>
+          <span class="impacto-mach-card__badge">Medido en testing</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sistema visual / Sistema de diseño -->
+  <section class="case-section sistema-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label sistema-label">09 - SISTEMA VISUAL</span>
+      <div class="sistema-title-group">
+        <span class="sistema-title-line"></span>
+        <h2 class="sistema-title">Sistema de <em>diseño</em></h2>
+      </div>
+
+      <div class="sistema-grid">
+        <!-- BOTONES -->
+        <article class="sistema-card">
+          <span class="sistema-card__title">BOTONES</span>
+          <div class="sistema-buttons">
+            <button class="sistema-btn sistema-btn--filled" type="button" disabled>Activar beneficio</button>
+            <button class="sistema-btn sistema-btn--outline" type="button" disabled>Ver detalles</button>
+            <button class="sistema-btn sistema-btn--outline" type="button" disabled>Explorar más</button>
+            <button class="sistema-btn sistema-btn--outline" type="button" disabled>Volver</button>
+          </div>
+        </article>
+
+        <!-- TIPOGRAFÍA -->
+        <article class="sistema-card">
+          <span class="sistema-card__title">TIPOGRAFÍA</span>
+          <div class="sistema-typo">
+            <span class="sistema-typo__label">DISPLAY · 500</span>
+            <h3 class="sistema-typo__display">Beneficios</h3>
+            <hr class="sistema-typo__divider" />
+            <span class="sistema-typo__label">BODY · 400</span>
+            <p class="sistema-typo__body">Experiencia clara para cada usuario.</p>
+            <span class="sistema-typo__label">LABELS · 500</span>
+          </div>
+        </article>
+
+        <!-- PALETA DE COLOR -->
+        <article class="sistema-card">
+          <span class="sistema-card__title">PALETA DE COLOR</span>
+          <ul class="sistema-palette">
+            <li><span class="sistema-swatch" style="background:#EBD5FF;"></span> Lila <code>#EBD5FF</code></li>
+            <li><span class="sistema-swatch" style="background:#7C5CDB;"></span> Purple <code>#7C5CDB</code></li>
+            <li><span class="sistema-swatch" style="background:#00C97A;"></span> Green <code>#00C97A</code></li>
+            <li><span class="sistema-swatch" style="background:#0F0B18;"></span> Dark <code>#0F0B18</code></li>
+            <li><span class="sistema-swatch" style="background:#A4665C;"></span> Primary <code>#A4665C</code></li>
+          </ul>
+        </article>
+
+        <!-- COMPONENTES -->
+        <article class="sistema-card">
+          <span class="sistema-card__title">COMPONENTES</span>
+          <div class="sistema-components">
+            <div class="sistema-pills">
+              <span class="sistema-pill sistema-pill--green">Activo</span>
+              <span class="sistema-pill sistema-pill--lila">Nuevo</span>
+              <span class="sistema-pill sistema-pill--orange">Promo</span>
+            </div>
+            <div class="sistema-stat-box">
+              <span class="sistema-stat-box__label">Beneficios activos</span>
+              <span class="sistema-stat-box__num">12</span>
+              <span class="sistema-stat-box__sub">+3 nuevos esta semana</span>
+            </div>
+            <div class="sistema-stat-box sistema-stat-box--dark">
+              <span class="sistema-stat-box__label">cashback disponible</span>
+              <span class="sistema-stat-box__num">$4.280</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusión -->
+  <section class="case-section conclusion-mach-section" style="background-color: #F6F3FF;">
+    <!-- Imágenes decorativas laterales (replican Figma) -->
+    <img class="conclusion-mach-img conclusion-mach-img--left" src="/assets/phonemock1.png" alt="" aria-hidden="true" />
+    <img class="conclusion-mach-img conclusion-mach-img--right" src="/assets/phoneMock2.png" alt="" aria-hidden="true" />
+
+    <div class="case-section__inner conclusion-mach-inner">
+      <span class="section-label conclusion-mach-label">10 - CIERRE</span>
+      <div class="conclusion-mach-title-group">
+        <span class="conclusion-mach-title-line"></span>
+        <h2 class="conclusion-mach-title">Conclusión</h2>
+      </div>
+      <p class="conclusion-mach-desc">Al priorizar el descubrimiento sobre la funcionalidad, cada decisión de diseño tuvo un efecto multiplicador sobre la activación y la retención. Este proyecto demostró que el mayor impacto en producto no siempre viene de agregar — sino de clarificar lo que ya existe.</p>
+      <a href="/#proyectos" class="conclusion-mach-btn">Ver mas proyectos</a>
+    </div>
+  </section>
+
+</CaseStudyLayout>
+
+<!-- Navbar lavanda solo en case study MACH (mismo color del hero) -->
+<style is:global>
+  body:has(.case-mach) .navbar {
+    background-color: #E8D5FF;
+  }
+  /* "beneficios" en morado vibrante #841AFF — el resto del título queda en marrón #A4665C */
+  .case-mach .case-hero__title-highlight--accent {
+    color: #841AFF !important;
+  }
+  /* "y engagement" con tipografía idéntica a "Rediseño de" — peso 500 + sin italic */
+  .case-mach .case-hero__title-highlight--regular {
+    font-weight: 500 !important;
+    font-style: normal !important;
+  }
+  /* Párrafos del contenido (secciones) en gris oscuro #686868 — color base de texto del body MACH */
+  .case-mach .case-section p {
+    color: #686868 !important;
+  }
+</style>
+
+<style>
+/* === Sección "El Contexto" MACH — replicada del Figma con paleta morada === */
+.contexto-section {
+  padding: 96px 0;
+}
+.contexto-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4A4B8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.contexto-label::before { display: none; }
+
+.contexto-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.contexto-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.contexto-title-group .contexto-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+.contexto-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+.contexto-section .case-section__inner > .contexto-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F9D;
+  max-width: none;
+  margin: 0 0 48px;
+}
+
+/* 4 cards arriba */
+.contexto-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+.contexto-card {
+  background: #fff;
+  border: 1px solid #E5E0FA;
+  border-radius: 8px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contexto-card__icon {
+  width: 40px;
+  height: 40px;
+  background-color: #EDE8FF;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #7C5DFB;
+}
+.contexto-card h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #7C5DFB;
+  margin: 0;
+}
+.contexto-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F9D;
+  margin: 0;
+}
+
+/* Grid 2 cols inferior: quote + stats */
+.contexto-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.contexto-quote-card {
+  background: linear-gradient(180deg, #EDE8FF 0%, #F6F3FF 100%);
+  border-left: 3px solid #7C5DFB;
+  border-radius: 8px;
+  padding: 32px;
+}
+.contexto-quote {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+  color: #5B4DB8;
+  margin: 0 0 16px;
+}
+.contexto-quote__author {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7C5DFB;
+  margin: 0;
+}
+
+.contexto-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contexto-stat {
+  background: #fff;
+  border: 1px solid #E5E0FA;
+  border-radius: 8px;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.contexto-stat__number {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #7C5DFB;
+  line-height: 1;
+  white-space: nowrap;
+}
+.contexto-stat__body strong {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5B4DB8;
+  margin-bottom: 4px;
+}
+.contexto-stat__body p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #766F9D;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .contexto-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contexto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .contexto-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Fricciones que bloqueaban el uso" MACH — paleta morada === */
+.fricciones-section {
+  padding: 96px 0;
+}
+.fricciones-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5B4DB8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.fricciones-label::before { display: none; }
+
+.fricciones-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.fricciones-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.fricciones-title-group .fricciones-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+.fricciones-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+.fricciones-section .case-section__inner > .fricciones-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F9D;
+  max-width: none;
+  margin: 0 0 48px;
+}
+
+.fricciones-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.fricciones-card {
+  background: #fff;
+  border: 1px solid #E5E0FA;
+  border-left: 3px solid #C4B7F9;
+  border-radius: 8px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.fricciones-card__icon {
+  width: 40px;
+  height: 40px;
+  background-color: #EDE8FF;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #7C5DFB;
+}
+.fricciones-card h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #7C5DFB;
+  margin: 0;
+}
+.fricciones-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F9D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .fricciones-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Objetivos del proyecto" MACH — 4 cards horizontales con número grande lavanda === */
+.objetivos-section {
+  padding: 96px 0;
+}
+.objetivos-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4A4B8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.objetivos-label::before { display: none; }
+
+.objetivos-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.objetivos-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.objetivos-title-group .objetivos-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+.objetivos-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+
+.objetivos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.objetivos-card {
+  background: #fff;
+  border: 1px solid #E5E0FA;
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.objetivos-card__num {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1;
+  color: #C4B7F9;
+}
+.objetivos-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #5B4DB8;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .objetivos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .objetivos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Proceso de trabajo" MACH — 4 círculos numerados conectados por línea morada === */
+.proceso-section {
+  padding: 96px 0;
+}
+.proceso-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4A4B8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.proceso-label::before { display: none; }
+
+.proceso-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.proceso-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.proceso-title-group .proceso-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+.proceso-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+.proceso-section .case-section__inner > .proceso-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F9D;
+  max-width: none;
+  margin: 0 0 64px;
+}
+
+/* Flow horizontal con línea conectora */
+.proceso-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+.proceso-flow::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background-color: #7C5DFB;
+  z-index: 0;
+}
+
+.proceso-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+.proceso-step__circle {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #7C5DFB;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7C5DFB;
+  letter-spacing: 0.04em;
+}
+.proceso-step__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #5B4DB8;
+  margin: 8px 0 0;
+}
+.proceso-step__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F9D;
+  margin: 0;
+  max-width: 220px;
+}
+
+@media (max-width: 900px) {
+  .proceso-flow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .proceso-flow::before {
+    display: none;
+  }
+}
+
+/* === Sección "Insight del research" MACH — dark theme + 4 cards lavanda === */
+.insights-section {
+  background-color: #2A2233;
+  padding: 96px 0;
+}
+.insights-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #B8B8C8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.insights-label::before { display: none; }
+
+.insights-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.insights-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.insights-title-group .insights-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0;
+}
+.insights-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.insights-card {
+  background-color: #F3F0FF;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.insights-card__num {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #C4B7F9;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+.insights-card h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #5B4DB8;
+  margin: 0;
+}
+.insights-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F9D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Rediseño de la experiencia" / Propuesta MACH === */
+.redisenio-section {
+  padding: 96px 0;
+}
+.redisenio-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4A4B8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.redisenio-label::before { display: none; }
+
+.redisenio-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.redisenio-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.redisenio-title-group .redisenio-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+.redisenio-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+.redisenio-section .case-section__inner > .redisenio-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F9D;
+  max-width: none;
+  margin: 0 0 48px;
+}
+
+/* Grid 2 cols: decisiones + imágenes */
+.redisenio-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.redisenio-decisions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.redisenio-decision {
+  background: #fff;
+  border: 1px solid #E5E0FA;
+  border-radius: 8px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.redisenio-decision__num {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #C4B7F9;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+.redisenio-decision h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #7C5DFB;
+  margin: 0;
+}
+.redisenio-decision p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F9D;
+  margin: 0;
+}
+
+.redisenio-images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.redisenio-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(91, 77, 184, 0.08);
+}
+
+@media (max-width: 900px) {
+  .redisenio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Cambios que impactaron el uso" / Mejoras UX MACH === */
+.mejoras-section {
+  padding: 100px 0 260px !important; /* top reducido para que el título suba y se solape con el wave gris superior, bottom amplio para mantener cards alejadas del wave morado */
+  position: relative;
+  overflow: hidden;
+}
+.mejoras-wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  z-index: 0;
+  pointer-events: none;
+}
+.mejoras-wave--tr {
+  height: 320px; /* wave superior reducido para que abrace el título sin invadir el contenido */
+}
+.mejoras-wave--tr {
+  top: 0;
+}
+.mejoras-wave--bl {
+  bottom: 0;
+}
+.mejoras-section .case-section__inner {
+  position: relative;
+  z-index: 1;
+}
+.mejoras-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4A4B8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.mejoras-label::before { display: none; }
+
+.mejoras-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.mejoras-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.mejoras-title-group .mejoras-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+.mejoras-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+
+.mejoras-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.mejoras-card {
+  background: #fff;
+  border: 1px solid #E5E0FA;
+  border-radius: 8px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+}
+.mejoras-card__icon {
+  width: 40px;
+  height: 40px;
+  background-color: #EDE8FF;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #7C5DFB;
+  margin-bottom: 4px;
+}
+.mejoras-card h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #7C5DFB;
+  margin: 0;
+}
+.mejoras-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F9D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .mejoras-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .mejoras-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Impacto en métricas" MACH === */
+.impacto-mach-section {
+  padding: 96px 0;
+}
+.impacto-mach-inner {
+  text-align: center;
+}
+.impacto-mach-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5B4DB8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.impacto-mach-label::before { display: none; }
+
+.impacto-mach-title-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.impacto-mach-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.impacto-mach-title-group .impacto-mach-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+.impacto-mach-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+.impacto-mach-section .impacto-mach-inner .impacto-mach-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F9D;
+  max-width: 540px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.impacto-mach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.impacto-mach-card {
+  background-color: #fff;
+  border: 1px solid #E5E0FA;
+  border-radius: 8px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+.impacto-mach-card__number {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #7C5DFB;
+  line-height: 1;
+}
+.impacto-mach-card__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F9D;
+  margin: 0;
+  max-width: 200px;
+}
+.impacto-mach-card__badge {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #7C5DFB;
+  background-color: #EDE8FF;
+  padding: 6px 14px;
+  border-radius: 50px;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .impacto-mach-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .impacto-mach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Sistema de diseño" MACH === */
+.sistema-section {
+  padding: 96px 0;
+}
+.sistema-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4A4B8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.sistema-label::before { display: none; }
+
+.sistema-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.sistema-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.sistema-title-group .sistema-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+.sistema-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #7C5DFB;
+}
+
+.sistema-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.sistema-card {
+  background: #fff;
+  border: 1px solid #E5E0FA;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.sistema-card__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #A4A4B8;
+  text-transform: uppercase;
+}
+
+/* Botones */
+.sistema-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sistema-btn {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: default;
+  text-align: center;
+  pointer-events: none;
+  transition: none;
+}
+.sistema-btn--filled {
+  background-color: #7C5DFB;
+  color: #fff;
+  border: none;
+}
+.sistema-btn--outline {
+  background-color: #fff;
+  color: #5B4DB8;
+  border: 1px solid #E5E0FA;
+}
+
+/* Tipografía */
+.sistema-typo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sistema-typo__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #A4A4B8;
+  letter-spacing: 0.04em;
+}
+.sistema-typo__display {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #7C5DFB;
+  margin: 0;
+  line-height: 1.2;
+}
+.sistema-typo__divider {
+  border: none;
+  border-top: 1px solid #E5E0FA;
+  margin: 8px 0;
+}
+.sistema-typo__body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #5B4DB8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Paleta */
+.sistema-palette {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sistema-palette li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #5B4DB8;
+}
+.sistema-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+.sistema-palette code {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  color: #A4A4B8;
+  margin-left: auto;
+}
+
+/* Componentes */
+.sistema-components {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sistema-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.sistema-pill {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+.sistema-pill--green { background: #D6F5E6; color: #00875A; }
+.sistema-pill--lila { background: #EBD5FF; color: #7C5DFB; }
+.sistema-pill--orange { background: #FFE0CC; color: #C8511C; }
+
+.sistema-stat-box {
+  background-color: #F6F3FF;
+  border: 1px solid #E5E0FA;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sistema-stat-box__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #A4A4B8;
+  letter-spacing: 0.04em;
+}
+.sistema-stat-box__num {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #5B4DB8;
+  line-height: 1.1;
+}
+.sistema-stat-box__sub {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #766F9D;
+}
+.sistema-stat-box--dark {
+  background-color: #1A1424;
+  border: none;
+}
+.sistema-stat-box--dark .sistema-stat-box__label {
+  color: #B8B8C8;
+}
+.sistema-stat-box--dark .sistema-stat-box__num {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .sistema-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .sistema-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Conclusión" / Cierre MACH === */
+.conclusion-mach-section {
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+/* Phones decorativos laterales con marco tipo iPhone (rectos, mitad fuera del section) */
+.conclusion-mach-img {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 28px;
+  border: 8px solid #1A1A1A;
+  box-shadow: 0 12px 32px rgba(91, 77, 184, 0.2);
+  background-color: #1A1A1A;
+}
+/* Phone izquierdo: solo mitad superior visible (mitad inferior cortada por overflow:hidden) */
+.conclusion-mach-img--left {
+  left: 60px;
+  bottom: 0;
+  transform: translateY(50%);
+}
+/* Phone derecho: solo mitad izquierda visible (mitad derecha cortada por overflow:hidden) */
+.conclusion-mach-img--right {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.conclusion-mach-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 900px) {
+  .conclusion-mach-img { display: none; }
+}
+.conclusion-mach-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5B4DB8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.conclusion-mach-label::before { display: none; }
+
+.conclusion-mach-title-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.conclusion-mach-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #7C5DFB;
+  border-radius: 2px;
+}
+.conclusion-mach-title-group .conclusion-mach-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #5B4DB8;
+  margin: 0;
+}
+
+.conclusion-mach-section .conclusion-mach-inner .conclusion-mach-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #5B4DB8;
+  max-width: 880px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.conclusion-mach-btn {
+  display: inline-block;
+  background-color: #841AFF;
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+.conclusion-mach-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.context-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.context-stat { text-align: center; }
+.context-stat__number { font-size: 2.5rem; font-weight: 700; display: block; }
+.friction-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+.friction-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  border-left: 3px solid #5B4DB8;
+}
+.friction-card h4 { color: #5B4DB8; margin-bottom: 8px; font-size: 0.95rem; }
+.friction-card p { font-size: 0.88rem; color: #555; line-height: 1.6; }
+.objectives-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 32px;
+}
+.objective-card {
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.objective-num { font-size: 1.5rem; font-weight: 700; }
+.process-steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.process-step {
+  flex: 1;
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-align: center;
+  min-width: 160px;
+}
+.process-step__icon { font-size: 1.8rem; margin-bottom: 8px; }
+.process-step h4 { margin-bottom: 6px; font-size: 0.95rem; }
+.process-step p { font-size: 0.82rem; color: #555; line-height: 1.5; }
+.process-step__arrow { font-size: 1.5rem; flex-shrink: 0; }
+.redesign-images {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+.case-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.conclusion p { font-size: 1.05rem; line-height: 1.8; margin-top: 16px; }
+
+/* === Tipografía unificada con Santander ===
+   Labels: 20px / lh 1.8 / #A7A2A6 (antes 14px / lh 1.5 / morado)
+   Subtítulos (.X-desc): 18px / lh 1.7 (antes lh 1.6)
+   Especificidad 3 clases para ganar al :global() del CaseStudyLayout */
+.contexto-label,
+.fricciones-label,
+.objetivos-label,
+.proceso-label,
+.insights-label,
+.redisenio-label,
+.mejoras-label,
+.impacto-mach-label,
+.sistema-label,
+.conclusion-mach-label {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #A7A2A6;
+}
+
+.contexto-section .case-section__inner > .contexto-desc,
+.fricciones-section .case-section__inner > .fricciones-desc,
+.proceso-section .case-section__inner > .proceso-desc,
+.redisenio-section .case-section__inner > .redisenio-desc {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.impacto-mach-section .impacto-mach-desc {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Todos los títulos h2 en #A4665C (marrón rosado) — texto base */
+.contexto-title-group .contexto-title,
+.fricciones-title-group .fricciones-title,
+.objetivos-title-group .objetivos-title,
+.proceso-title-group .proceso-title,
+.insights-title-group .insights-title,
+.redisenio-title-group .redisenio-title,
+.mejoras-title-group .mejoras-title,
+.impacto-mach-title-group .impacto-mach-title,
+.sistema-title-group .sistema-title,
+.conclusion-mach-title-group .conclusion-mach-title {
+  color: #A4665C;
+}
+
+/* TODOS los elementos en bold (weight 700) en morado vibrante #841AFF — mismo color que la palabra "beneficios" */
+.contexto-title em,
+.fricciones-title em,
+.objetivos-title em,
+.proceso-title em,
+.insights-title em,
+.redisenio-title em,
+.mejoras-title em,
+.impacto-mach-title em,
+.sistema-title em,
+.conclusion-mach-title em,
+.contexto-stat__number,
+.insights-card__num,
+.redisenio-decision__num,
+.impacto-mach-card__number,
+.sistema-stat-box__num {
+  color: #841AFF !important;
+}
+
+/* Títulos h4 dentro de las cards en marrón #A4665C (el bold dentro de cards usa el color base de texto) */
+.contexto-card h4,
+.fricciones-card h4,
+.insights-card h4,
+.redisenio-card h4,
+.mejoras-card h4 {
+  color: #A4665C !important;
+}
+
+
+/* ============================================================
+   ANIMATIONS — Replicado del patrón Santander con paleta morada
+   ============================================================ */
+
+/* 1. Hover lift en cards */
+.contexto-card,
+.fricciones-card,
+.objetivo-card,
+.insight-card,
+.redisenio-card,
+.mejoras-card,
+.impacto-mach-card,
+.sistema-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.contexto-card:hover,
+.fricciones-card:hover,
+.insight-card:hover,
+.redisenio-card:hover,
+.mejoras-card:hover,
+.impacto-mach-card:hover,
+.sistema-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(124, 93, 251, 0.15);
+}
+.objetivo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(124, 93, 251, 0.12);
+  border-color: #7C5DFB;
+}
+.impacto-mach-card:hover .impacto-mach-card__number {
+  text-shadow: 0 2px 16px rgba(124, 93, 251, 0.30);
+  transition: text-shadow 0.3s ease;
+}
+
+/* 2. Botón hero con efecto refinado */
+.case-mach .case-hero__btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.case-mach .case-hero__btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(124, 93, 251, 0.35);
+}
+
+/* 3. Botón conclusion con efecto refinado */
+.conclusion-btn,
+.case-mach .conclusion-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.conclusion-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(124, 93, 251, 0.40);
+  opacity: 1;
+}
+
+/* 4. Process steps con scale en círculos */
+.proceso-step__circle,
+.proceso-step__icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.proceso-step:hover .proceso-step__circle,
+.proceso-step:hover .proceso-step__icon {
+  transform: scale(1.12);
+  background-color: #7C5DFB;
+  color: #fff;
+  border-color: #7C5DFB;
+}
+
+/* 5. Stagger reveal — fade-in al entrar al viewport (solo con .anim-ready, garantía visibilidad sin JS) */
+.anim-ready .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.anim-ready .reveal:nth-child(1) { transition-delay: 0s; }
+.anim-ready .reveal:nth-child(2) { transition-delay: 0.08s; }
+.anim-ready .reveal:nth-child(3) { transition-delay: 0.16s; }
+.anim-ready .reveal:nth-child(4) { transition-delay: 0.24s; }
+.anim-ready .reveal:nth-child(5) { transition-delay: 0.32s; }
+
+/* 6. Líneas decorativas con drawing animation (solo con anim-ready) */
+.anim-ready .contexto-title-line,
+.anim-ready .fricciones-title-line,
+.anim-ready .objetivos-title-line,
+.anim-ready .proceso-title-line,
+.anim-ready .insights-title-line,
+.anim-ready .redisenio-title-line,
+.anim-ready .mejoras-title-line,
+.anim-ready .impacto-mach-title-line,
+.anim-ready .sistema-title-line,
+.anim-ready .conclusion-mach-title-line {
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.15s;
+}
+.title-line-reveal.is-visible .contexto-title-line,
+.title-line-reveal.is-visible .fricciones-title-line,
+.title-line-reveal.is-visible .objetivos-title-line,
+.title-line-reveal.is-visible .proceso-title-line,
+.title-line-reveal.is-visible .insights-title-line,
+.title-line-reveal.is-visible .redisenio-title-line,
+.title-line-reveal.is-visible .mejoras-title-line,
+.title-line-reveal.is-visible .impacto-mach-title-line,
+.title-line-reveal.is-visible .sistema-title-line,
+.title-line-reveal.is-visible .conclusion-mach-title-line {
+  width: 96px;
+}
+
+/* === Title-lines mobile: más cortas (56px) + alineadas al inicio del título === */
+@media (max-width: 600px) {
+  .contexto-title-group,
+  .fricciones-title-group,
+  .objetivos-title-group,
+  .proceso-title-group,
+  .insights-title-group,
+  .redisenio-title-group,
+  .mejoras-title-group,
+  .impacto-mach-title-group,
+  .sistema-title-group,
+  .conclusion-mach-title-group {
+    align-items: flex-start;
+  }
+  .contexto-title-line,
+  .fricciones-title-line,
+  .objetivos-title-line,
+  .proceso-title-line,
+  .insights-title-line,
+  .redisenio-title-line,
+  .mejoras-title-line,
+  .impacto-mach-title-line,
+  .sistema-title-line,
+  .conclusion-mach-title-line {
+    width: 56px;
+    margin-top: 16px;
+  }
+  /* Override del width final del drawing animation (sobreescribe el 96px) */
+  .title-line-reveal.is-visible .contexto-title-line,
+  .title-line-reveal.is-visible .fricciones-title-line,
+  .title-line-reveal.is-visible .objetivos-title-line,
+  .title-line-reveal.is-visible .proceso-title-line,
+  .title-line-reveal.is-visible .insights-title-line,
+  .title-line-reveal.is-visible .redisenio-title-line,
+  .title-line-reveal.is-visible .mejoras-title-line,
+  .title-line-reveal.is-visible .impacto-mach-title-line,
+  .title-line-reveal.is-visible .sistema-title-line,
+  .title-line-reveal.is-visible .conclusion-mach-title-line {
+    width: 56px;
+  }
+}
+</style>
+
+<script is:inline>
+  // ============================================================
+  // Animation observer — MACH
+  // ============================================================
+  const initMachAnimations = () => {
+    if (!('IntersectionObserver' in window)) return;
+    document.body.classList.add('anim-ready');
+
+    const revealGroups = [
+      '.contexto-cards', '.contexto-stats', '.fricciones-grid',
+      '.objetivos-grid', '.proceso-flow', '.insights-grid',
+      '.redisenio-grid', '.mejoras-grid', '.impacto-mach-grid', '.sistema-grid'
+    ];
+    revealGroups.forEach((sel) => {
+      document.querySelectorAll(sel).forEach((parent) => {
+        Array.from(parent.children).forEach((child) => child.classList.add('reveal'));
+      });
+    });
+
+    document.querySelectorAll(
+      '.contexto-title-group, .fricciones-title-group, .objetivos-title-group, .proceso-title-group, .insights-title-group, .redisenio-title-group, .mejoras-title-group, .impacto-mach-title-group, .sistema-title-group, .conclusion-mach-title-group'
+    ).forEach((el) => el.classList.add('title-line-reveal'));
+
+    const targets = document.querySelectorAll('.reveal, .title-line-reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+
+    targets.forEach((el) => observer.observe(el));
+
+    setTimeout(() => {
+      targets.forEach((el) => {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
+          observer.unobserve(el);
+        }
+      });
+    }, 1500);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMachAnimations);
+  } else {
+    initMachAnimations();
+  }
+</script>

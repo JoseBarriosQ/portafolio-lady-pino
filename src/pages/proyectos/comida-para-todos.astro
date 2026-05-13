@@ -1,0 +1,1845 @@
+---
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+---
+
+<CaseStudyLayout
+  titleHTML={`Diseño de Plataforma digital para <em>acceso</em> a <em class="case-hero__title-highlight">ayuda alimentaria</em>`}
+  description="Una experiencia digital enfocada en facilitar el acceso a ayuda alimentaria de forma clara, accesible y humana."
+  client="Comida para todos Fundación / ONG"
+  role="UX-UI Designer"
+  duration="Impacto Social"
+  durationLabel="TIPO"
+  focus="Accesibilidad / UX"
+  heroImage="/assets/TelefonosComidaParaTodos.png"
+  heroImageAlt="Plataforma Comida para Todos"
+  floatingCardLabel="Usuarios atendidos"
+  floatingCardValue="+2.400 familias"
+  accentColor="#FAE0CA"
+  headingColor="#A4665C"
+  highlightColor="#FF7E3C"
+  brightColor="#FF4800"
+  heroBackground="linear-gradient(180deg, #FFE0B4 0%, #FFF4E0 100%)"
+  pageSlug="comida-para-todos"
+>
+
+  <!-- El Desafío -->
+  <section class="case-section desafio-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label desafio-label">01 - CONTEXTO</span>
+      <div class="desafio-title-group">
+        <span class="desafio-title-line"></span>
+        <h2 class="desafio-title">El <em>Desafío</em></h2>
+      </div>
+
+      <div class="desafio-grid">
+        <!-- Col izquierda: cita -->
+        <aside class="desafio-quote-card">
+          <p class="desafio-quote">"Muchas personas necesitan acceder a ayuda alimentaria, pero la información suele estar fragmentada, ser difícil de entender o simplemente inaccesible."</p>
+          <p class="desafio-quote__author">— Diagnóstico inicial del proyecto</p>
+        </aside>
+
+        <!-- Col derecha: 3 stats apilados -->
+        <div class="desafio-stats">
+          <article class="desafio-stat">
+            <span class="desafio-stat__number">1 de 3</span>
+            <div class="desafio-stat__body">
+              <strong>personas en Chile con inseguridad alimentaria</strong>
+              <p>no sabe dónde buscar ayuda en su comunidad</p>
+            </div>
+          </article>
+          <article class="desafio-stat">
+            <span class="desafio-stat__number">74%</span>
+            <div class="desafio-stat__body">
+              <strong>de las fundaciones</strong>
+              <p>no cuenta con plataforma digital accesible para sus beneficiarios</p>
+            </div>
+          </article>
+          <article class="desafio-stat">
+            <span class="desafio-stat__number">+60%</span>
+            <div class="desafio-stat__body">
+              <strong>de los usuarios</strong>
+              <p>abandona el proceso de búsqueda de ayuda por complejidad digital</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barreras -->
+  <section class="case-section barreras-section" style="background-color: #FFF1E0;">
+    <div class="case-section__inner">
+      <span class="section-label barreras-label">02 - EL PROBLEMA</span>
+      <div class="barreras-title-group">
+        <span class="barreras-title-line"></span>
+        <h2 class="barreras-title">Barreras de <em>acceso</em></h2>
+      </div>
+      <p class="barreras-desc">Identificamos cuatro barreras principales que impedían a las personas acceder a la ayuda que necesitaban.</p>
+
+      <div class="barreras-grid">
+        <article class="barreras-card">
+          <span class="barreras-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </span>
+          <h4>Información poco clara</h4>
+          <p>La información sobre programas de ayuda estaba dispersa, era técnica y difícil de entender para personas con baja alfabetización digital.</p>
+        </article>
+        <article class="barreras-card barreras-card--highlight">
+          <span class="barreras-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+          </span>
+          <h4>Dificultad para acceder a beneficios</h4>
+          <p>El proceso de inscripción era tedioso, con múltiples pasos y documentos requeridos sin orientación clara en cada etapa.</p>
+        </article>
+        <article class="barreras-card">
+          <span class="barreras-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <h4>Baja confianza en lo digital</h4>
+          <p>El usuario no confiaba en plataformas digitales para este tipo de gestiones. La falta de señales de legitimidad generaba desconfianza.</p>
+        </article>
+        <article class="barreras-card">
+          <span class="barreras-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </span>
+          <h4>Falta de centralización</h4>
+          <p>Cada programa de ayuda tenía su propio canal: algunas fundaciones usaban WhatsApp, otros formularios físicos, otros redes sociales.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Persona -->
+  <section class="case-section investigacion-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label investigacion-label">03 - INVESTIGACIÓN</span>
+      <div class="investigacion-title-group">
+        <span class="investigacion-title-line"></span>
+        <h2 class="investigacion-title">Entendiendo a las <em>personas</em></h2>
+      </div>
+      <p class="investigacion-desc">Realizamos entrevistas con beneficiarios, voluntarios y coordinadores para construir un perfil representativo del usuario principal.</p>
+
+      <div class="investigacion-grid">
+        <!-- Col izquierda: persona card -->
+        <aside class="persona-card">
+          <div class="persona-card__photo">
+            <img src="/assets/Maria.jpg" alt="María, usuaria principal" />
+          </div>
+          <h3 class="persona-card__name">María, 48 años</h3>
+          <p class="persona-card__role">Jefa de hogar · Ñuñoa, Santiago</p>
+          <div class="persona-card__tags">
+            <span class="persona-card__tag">Baja alfabetización digital</span>
+            <span class="persona-card__tag">3 hijos</span>
+            <span class="persona-card__tag">Trabaja de forma independiente</span>
+            <span class="persona-card__tag">Smartphone básico</span>
+          </div>
+        </aside>
+
+        <!-- Col derecha: 3 secciones (necesidades, frustraciones, motivaciones) -->
+        <div class="investigacion-blocks">
+          <article class="investigacion-block">
+            <span class="investigacion-block__label">NECESIDADES</span>
+            <ul class="investigacion-block__list">
+              <li>Encontrar ayuda alimentaria de forma rápida y sin complicaciones</li>
+              <li>Entender claramente qué programas le corresponden y cómo acceder</li>
+              <li>Saber con certeza cuándo y dónde retirar cada beneficio</li>
+            </ul>
+          </article>
+          <article class="investigacion-block">
+            <span class="investigacion-block__label">FRUSTRACIONES</span>
+            <ul class="investigacion-block__list">
+              <li>Páginas web complicadas con mucho texto y sin orientación clara</li>
+              <li>No sabe si la información está actualizada ni si es confiable</li>
+              <li>Le da vergüenza pedir ayuda en persona cuando no sabe si le corresponde</li>
+            </ul>
+          </article>
+          <article class="investigacion-block">
+            <span class="investigacion-block__label">MOTIVACIONES</span>
+            <ul class="investigacion-block__list">
+              <li>El bienestar de su familia es su prioridad absoluta</li>
+              <li>Quiere ser autónoma y no depender de terceros para gestionar estos procesos</li>
+              <li>Valora cuando una plataforma la trata con dignidad y claridad</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia actual / Customer Journey -->
+  <section class="case-section journey-section">
+    <div class="case-section__inner">
+      <span class="section-label journey-label">04 - CUSTOMER JOURNEY</span>
+      <div class="journey-title-group">
+        <span class="journey-title-line"></span>
+        <h2 class="journey-title">Experiencia <em>actual</em></h2>
+      </div>
+      <p class="journey-desc">Mapeamos el flujo real que seguía un usuario antes del rediseño para identificar los puntos de quiebre.</p>
+
+      <div class="journey-flow">
+        <article class="journey-step">
+          <span class="journey-step__circle" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
+          <span class="journey-step__paso">PASO 01</span>
+          <h4 class="journey-step__title">Necesita ayuda</h4>
+          <p class="journey-step__desc">María identifica que su familia necesita apoyo alimentario urgente.</p>
+        </article>
+        <article class="journey-step">
+          <span class="journey-step__circle" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </span>
+          <span class="journey-step__paso">PASO 02</span>
+          <h4 class="journey-step__title">Busca información</h4>
+          <p class="journey-step__desc">Busca en Google, pregunta en grupos de WhatsApp y llama por teléfono sin encontrar respuestas claras.</p>
+        </article>
+        <article class="journey-step">
+          <span class="journey-step__circle" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <span class="journey-step__paso">PASO 03</span>
+          <h4 class="journey-step__title">Se confunde</h4>
+          <p class="journey-step__desc">Encuentra páginas con requisitos confusos, información desactualizada y sin orientación paso a paso.</p>
+        </article>
+        <article class="journey-step">
+          <span class="journey-step__circle" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </span>
+          <span class="journey-step__paso">PASO 04</span>
+          <h4 class="journey-step__title">Abandona</h4>
+          <p class="journey-step__desc">Frustrada, abandona el proceso. La ayuda que necesitaba estaba disponible, pero no pudo acceder a ella.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Propuesta de solución -->
+  <section class="case-section propuesta-section" style="background-color: #FFF1E0;" id="solucion">
+    <div class="case-section__inner">
+      <span class="section-label propuesta-label">05 - PROPUESTA</span>
+      <div class="propuesta-title-group">
+        <span class="propuesta-title-line"></span>
+        <h2 class="propuesta-title">Propuesta de <em>solución</em></h2>
+      </div>
+      <p class="propuesta-desc">Se diseñó una plataforma clara y accesible que permite encontrar ayuda de forma simple, confiable y digna.</p>
+
+      <img src="/assets/PropuestaComidaParaTodos.png" alt="Propuesta de solución" class="propuesta-image" />
+
+      <div class="propuesta-grid">
+        <article class="propuesta-card propuesta-card--highlight">
+          <span class="propuesta-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <h4>Diseño centrado en personas</h4>
+          <p>Lenguaje simple, sin tecnicismos. Cada texto fue testeado con usuarios reales de distintos niveles de alfabetización digital.</p>
+        </article>
+        <article class="propuesta-card">
+          <span class="propuesta-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <h4>Confianza y legitimidad</h4>
+          <p>Señales visuales de seguridad, testimonios reales y datos verificables para generar confianza desde el primer contacto.</p>
+        </article>
+        <article class="propuesta-card">
+          <span class="propuesta-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </span>
+          <h4>Categorías claras</h4>
+          <p>Cuatro categorías principales (Almuerzos, Despensa, Educación, Huertas) con acceso inmediato desde el home.</p>
+        </article>
+        <article class="propuesta-card">
+          <span class="propuesta-card__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <h4>Información actualizada</h4>
+          <p>Panel de administración para que los coordinadores actualicen programas en tiempo real, sin conocimientos técnicos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section class="case-section funcionalidades-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label funcionalidades-label">06 - FUNCIONALIDADES</span>
+      <div class="funcionalidades-title-group">
+        <span class="funcionalidades-title-line"></span>
+        <h2 class="funcionalidades-title">Lo que hace <em>diferente</em> esta plataforma</h2>
+      </div>
+
+      <div class="funcionalidades-grid">
+        <article class="funcionalidades-card">
+          <span class="funcionalidades-card__num">01</span>
+          <h4>Acceso simple a ayuda</h4>
+          <p>En menos de 3 clics el usuario encuentra el programa que necesita, con todos los datos relevantes en un solo lugar.</p>
+        </article>
+        <article class="funcionalidades-card">
+          <span class="funcionalidades-card__num">02</span>
+          <h4>Navegación clara</h4>
+          <p>Arquitectura de información diseñada para usuarios con baja experiencia digital. Nada innecesario, todo esencial.</p>
+        </article>
+        <article class="funcionalidades-card">
+          <span class="funcionalidades-card__num">03</span>
+          <h4>Información estructurada</h4>
+          <p>Cada programa muestra: qué es, a quién va dirigido, cómo acceder y cuándo. Sin ambigüedades ni letra chica.</p>
+        </article>
+        <article class="funcionalidades-card">
+          <span class="funcionalidades-card__num">04</span>
+          <h4>Diseño accesible</h4>
+          <p>Cumple estándares WCAG AA. Funciona en dispositivos básicos con conexión lenta y en pantallas pequeñas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- El Lado Humano -->
+  <section class="case-section humano-section">
+    <div class="case-section__inner">
+      <span class="section-label humano-label">07 - EL LADO HUMANO</span>
+      <div class="humano-title-group">
+        <span class="humano-title-line"></span>
+        <h2 class="humano-title">Diseño con <em>propósito</em></h2>
+      </div>
+      <p class="humano-desc">Detrás de cada pantalla hay personas reales. Voluntarios, coordinadores y familias que confían en esta plataforma para acceder a algo esencial.</p>
+
+      <div class="humano-grid">
+        <article class="humano-card">
+          <div class="humano-card__photo">
+            <img src="/assets/DiseñoConProposito1.png" alt="Voluntarios en acción" />
+          </div>
+          <div class="humano-card__body">
+            <span class="humano-card__label">VOLUNTARIOS EN ACCIÓN</span>
+            <p>Personas que dedican su tiempo a preparar y distribuir alimentos en sus comunidades.</p>
+          </div>
+        </article>
+        <article class="humano-card">
+          <div class="humano-card__photo">
+            <img src="/assets/DiseñoConProposito2.png" alt="Preparación de alimentos" />
+          </div>
+          <div class="humano-card__body">
+            <span class="humano-card__label">PREPARACIÓN DE ALIMENTOS</span>
+            <p>Cocinas comunitarias que producen cientos de raciones diarias con ingredientes locales.</p>
+          </div>
+        </article>
+        <article class="humano-card">
+          <div class="humano-card__photo">
+            <img src="/assets/DiseñoConProposito3.png" alt="Huertas comunitarias" />
+          </div>
+          <div class="humano-card__body">
+            <span class="humano-card__label">HUERTAS COMUNITARIAS</span>
+            <p>Espacios verdes donde la comunidad cultiva sus propios alimentos y comparte el conocimiento.</p>
+          </div>
+        </article>
+      </div>
+
+      <blockquote class="humano-quote">
+        <p class="humano-quote__text">"El diseño no es solo cómo se ve ni cómo funciona. El diseño es cómo hace sentir a las personas. En este proyecto, cada decisión buscó que el usuario se sintiera visto, respetado y capaz."</p>
+        <p class="humano-quote__author">— Principio guía del proyecto</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Lo que cambió / Impacto -->
+  <section class="case-section impacto-section" style="background-color: #FFF1E0;">
+    <div class="case-section__inner impacto-inner">
+      <span class="section-label impacto-label">08 - IMPACTO</span>
+      <div class="impacto-title-group">
+        <span class="impacto-title-line"></span>
+        <h2 class="impacto-title">Lo que <em>cambio</em></h2>
+      </div>
+      <p class="impacto-desc">Resultados medidos con usuarios reales en fases de testeo y post-lanzamiento.</p>
+
+      <div class="impacto-grid">
+        <article class="impacto-card">
+          <span class="impacto-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <h4>Mayor acceso a información</h4>
+          <p>Los usuarios encontraban el programa que necesitaban en menos de 3 minutos, versus los 20+ minutos previos.</p>
+        </article>
+        <article class="impacto-card">
+          <span class="impacto-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </span>
+          <h4>Mejora en la experiencia</h4>
+          <p>El 89% de usuarios en testing calificó la plataforma como "fácil" o "muy fácil" de usar en una primera visita.</p>
+        </article>
+        <article class="impacto-card">
+          <span class="impacto-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <h4>Mayor confianza digital</h4>
+          <p>La percepción de seguridad y legitimidad aumentó en un 64% respecto al sistema anterior según encuestas a beneficiarios.</p>
+        </article>
+        <article class="impacto-card">
+          <span class="impacto-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
+          <h4>Conexión comunitaria</h4>
+          <p>La plataforma se convirtió en un punto de encuentro. Los programas aumentaron su inscripción en un 40% el primer mes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusión -->
+  <section class="case-section conclusion-section" style="background-color: #fff;">
+    <div class="case-section__inner conclusion-inner">
+      <span class="section-label conclusion-label">09 - CIERRE</span>
+      <div class="conclusion-title-group">
+        <span class="conclusion-title-line"></span>
+        <h2 class="conclusion-title">Conclusión</h2>
+      </div>
+
+      <blockquote class="conclusion-quote">
+        <p>"El diseño no solo mejora una experiencia digital, sino que facilita el acceso a algo <em>esencial</em>: la alimentación."</p>
+      </blockquote>
+
+      <p class="conclusion-desc">Este proyecto demostró que el diseño centrado en personas tiene un impacto directo en la vida real. Reducir fricciones, hablar con claridad y generar confianza no es solo buena UX — es justicia de acceso.</p>
+
+      <a href="/#proyectos" class="conclusion-btn">Ver mas proyectos</a>
+    </div>
+  </section>
+
+</CaseStudyLayout>
+
+<!-- Navbar amarillo solo en case study Comida para Todos (matchea franja amarilla del top del hero) -->
+<style is:global>
+  body:has(.case-comida-para-todos) .navbar {
+    background-color: #FFE0B4;
+  }
+</style>
+
+<style>
+/* === Sección "El Desafío" — rediseñada según Figma === */
+.desafio-section {
+  padding: 96px 0;
+}
+/* Label numerado sin línea heredada del global */
+.desafio-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4665C;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.desafio-label::before { display: none; }
+
+/* Título con línea naranja + highlight italic */
+.desafio-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.desafio-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.desafio-title-group .desafio-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #A4665C;
+  margin: 0;
+}
+.desafio-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+
+/* Grid 2 columnas: cita + stats — cita centrada vertical con respecto a la columna de stats */
+.desafio-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Quote card */
+.desafio-quote-card {
+  background-color: #FFE8C7;
+  border-left: 3px solid #FF7E3C;
+  border-radius: 8px;
+  padding: 32px;
+}
+.desafio-quote {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  color: #A4665C;
+  margin: 0 0 16px;
+}
+.desafio-quote__author {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #A4665C;
+  margin: 0;
+}
+
+/* Stats apilados */
+.desafio-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.desafio-stat {
+  background-color: #fff;
+  border: 1px solid #E8D5CE;
+  border-radius: 8px;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.desafio-stat__number {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #FF7E3C;
+  white-space: nowrap;
+  line-height: 1;
+}
+.desafio-stat__body strong {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #A4665C;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+.desafio-stat__body p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #766F6D;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .desafio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Barreras de acceso" — rediseñada según Figma === */
+.barreras-section {
+  padding: 96px 0;
+}
+.barreras-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4665C;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.barreras-label::before { display: none; }
+
+.barreras-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.barreras-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.barreras-title-group .barreras-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #A4665C;
+  margin: 0;
+}
+.barreras-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+.barreras-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  max-width: 720px;
+  margin: 0 0 48px;
+}
+
+.barreras-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.barreras-card {
+  background: #fff;
+  border: 1px solid #E8D5CE;
+  border-left: 3px solid #FFB07A;
+  border-radius: 8px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.barreras-card--highlight {
+  border: 1.5px solid #FF7E3C;
+  border-left: 3px solid #FF7E3C;
+}
+.barreras-card__icon {
+  width: 40px;
+  height: 40px;
+  background-color: #FFE8C7;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF7E3C;
+}
+.barreras-card h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #A4665C;
+  margin: 0;
+}
+.barreras-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .barreras-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Entendiendo a las personas" — rediseñada según Figma === */
+.investigacion-section {
+  padding: 96px 0;
+}
+.investigacion-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4665C;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.investigacion-label::before { display: none; }
+
+.investigacion-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.investigacion-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.investigacion-title-group .investigacion-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #A4665C;
+  margin: 0;
+}
+.investigacion-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+.investigacion-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  max-width: none;
+  margin: 0 0 48px;
+}
+
+/* Grid 2 columnas: persona-card + bloques — stretch para que la card iguale el alto de la columna derecha */
+.investigacion-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+/* Persona card — contenido centrado verticalmente cuando ocupa todo el alto del row */
+.persona-card {
+  background-color: #FFE8C7;
+  border-radius: 16px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+.persona-card__photo {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #FF7E3C;
+  border: 3px solid #FF7E3C;
+}
+.persona-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.persona-card__name {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #A4665C;
+  margin: 8px 0 0;
+}
+.persona-card__role {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #766F6D;
+  margin: 0 0 8px;
+}
+.persona-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.persona-card__tag {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #A4665C;
+  background-color: #FFD9B5;
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+/* Bloques: necesidades / frustraciones / motivaciones */
+.investigacion-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.investigacion-block {
+  background-color: #fff;
+  border: 1px solid #E8D5CE;
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+.investigacion-block__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #FF7E3C;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+.investigacion-block__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.investigacion-block__list li {
+  position: relative;
+  padding-left: 18px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F6D;
+}
+.investigacion-block__list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #FF7E3C;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .investigacion-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Experiencia actual" / Customer Journey — dark theme + 4 steps con línea horizontal === */
+.journey-section {
+  background-color: #1A1A1A;
+  padding: 96px 0;
+}
+.journey-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #B8B8B8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.journey-label::before { display: none; }
+
+.journey-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.journey-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.journey-title-group .journey-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0;
+}
+.journey-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+.journey-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #FFFFFF !important;
+  max-width: none;
+  margin: 0 0 64px;
+}
+
+/* Flow horizontal con línea conectora */
+.journey-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  padding-top: 0;
+}
+.journey-flow::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background-color: #FF7E3C;
+  z-index: 0;
+}
+
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+.journey-step__circle {
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid #FF7E3C;
+  background-color: #1A1A1A;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF7E3C;
+}
+.journey-step__paso {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #888888;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+.journey-step__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+}
+.journey-step__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #B8B8B8;
+  margin: 0;
+  max-width: 220px;
+}
+
+@media (max-width: 900px) {
+  .journey-flow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .journey-flow::before {
+    display: none;
+  }
+}
+
+/* === Sección "Propuesta de solución" — rediseñada según Figma === */
+.propuesta-section {
+  padding: 96px 0;
+}
+.propuesta-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4665C;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.propuesta-label::before { display: none; }
+
+.propuesta-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.propuesta-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.propuesta-title-group .propuesta-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #A4665C;
+  margin: 0;
+}
+.propuesta-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+.propuesta-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  max-width: none;
+  margin: 0 0 48px;
+}
+
+.propuesta-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 0 auto 64px;
+}
+
+.propuesta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.propuesta-card {
+  background: #fff;
+  border: 1px solid #E8D5CE;
+  border-left: 3px solid #FFB07A;
+  border-radius: 8px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.propuesta-card--highlight {
+  border: 1.5px solid #FF7E3C;
+  border-left: 3px solid #FF7E3C;
+}
+.propuesta-card__icon {
+  width: 40px;
+  height: 40px;
+  background-color: #FFE8C7;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF7E3C;
+}
+.propuesta-card h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #A4665C;
+  margin: 0;
+}
+.propuesta-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .propuesta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Funcionalidades" — rediseñada según Figma (4 cards horizontales con número grande naranja claro) === */
+.funcionalidades-section {
+  padding: 96px 0;
+}
+.funcionalidades-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4665C;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.funcionalidades-label::before { display: none; }
+
+.funcionalidades-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.funcionalidades-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.funcionalidades-title-group .funcionalidades-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #A4665C;
+  margin: 0;
+}
+.funcionalidades-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+
+.funcionalidades-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.funcionalidades-card {
+  background: #fff;
+  border: 1px solid #F2E1D8;
+  border-radius: 8px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+}
+.funcionalidades-card__num {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1;
+  color: #FFC499;
+  margin-bottom: 8px;
+}
+.funcionalidades-card h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #FF7E3C;
+  margin: 0;
+}
+.funcionalidades-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F6D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .funcionalidades-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .funcionalidades-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "El Lado Humano" — dark theme con 3 cards de imagen + cita destacada === */
+.humano-section {
+  background-color: #0F0F0F;
+  padding: 96px 0;
+}
+.humano-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #B8B8B8;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.humano-label::before { display: none; }
+
+.humano-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.humano-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.humano-title-group .humano-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0;
+}
+.humano-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+.humano-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #FFFFFF !important;
+  max-width: none;
+  margin: 0 0 48px;
+}
+
+.humano-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.humano-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1F1F1F;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.humano-card__photo {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.humano-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.humano-card__body {
+  padding: 24px;
+}
+.humano-card__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #FF7E3C;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+.humano-card__body p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #CCCCCC;
+  margin: 0;
+}
+
+/* Quote card destacada al final de la sección */
+.humano-quote {
+  background-color: #3D2418;
+  border-left: 3px solid #FF7E3C;
+  border-radius: 8px;
+  padding: 32px 40px;
+  margin: 0;
+}
+.humano-quote__text {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  color: #F2F2F2;
+  margin: 0 0 12px;
+}
+.humano-quote__author {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #B8B8B8;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .humano-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Lo que cambio" / Impacto — header centrado + 4 cards con icons === */
+.impacto-section {
+  padding: 96px 0;
+}
+.impacto-inner {
+  text-align: center;
+}
+.impacto-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4665C;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.impacto-label::before { display: none; }
+
+.impacto-title-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.impacto-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.impacto-title-group .impacto-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #A4665C;
+  margin: 0;
+}
+.impacto-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+.impacto-section .impacto-inner .impacto-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  max-width: 540px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.impacto-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.impacto-card {
+  background-color: #fff;
+  border: 1px solid #F2E1D8;
+  border-radius: 8px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+}
+.impacto-card__icon {
+  width: 48px;
+  height: 48px;
+  background-color: #FFE8C7;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF7E3C;
+  margin-bottom: 4px;
+}
+.impacto-card h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #FF7E3C;
+  margin: 0;
+}
+.impacto-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F6D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .impacto-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .impacto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Sección "Conclusión" / Cierre — header centrado + quote destacada con highlight + CTA === */
+.conclusion-section {
+  padding: 96px 0;
+}
+.conclusion-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conclusion-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #A4665C;
+  text-transform: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.conclusion-label::before { display: none; }
+
+.conclusion-title-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.conclusion-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #FF7E3C;
+  border-radius: 2px;
+}
+.conclusion-title-group .conclusion-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #A4665C;
+  margin: 0;
+}
+
+/* Quote destacada con bg gradient amarillo */
+.conclusion-quote {
+  background: linear-gradient(180deg, #FFE8C7 0%, #FFF1E0 100%);
+  border-radius: 12px;
+  padding: 40px 48px;
+  margin: 0 0 32px;
+  max-width: 880px;
+  width: 100%;
+}
+.conclusion-quote p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+  color: #A4665C;
+  margin: 0;
+  text-align: center;
+}
+.conclusion-quote em {
+  font-style: italic;
+  font-weight: 700;
+  color: #FF7E3C;
+}
+
+.conclusion-section .conclusion-inner .conclusion-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  max-width: 720px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.conclusion-btn {
+  display: inline-block;
+  background-color: #FF4800;
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 50px;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+.conclusion-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.context-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.context-stat { text-align: center; }
+.context-stat__number { font-size: 2.2rem; font-weight: 700; display: block; line-height: 1.1; }
+.barrier-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 32px;
+}
+.barrier-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  border-left: 3px solid #F4A261;
+}
+.barrier-icon { font-size: 1.8rem; display: block; margin-bottom: 10px; }
+.barrier-card h4 { color: #7A4A2A; margin-bottom: 8px; font-size: 0.95rem; }
+.barrier-card p { font-size: 0.88rem; color: #555; line-height: 1.6; }
+/* legacy .persona-* / .persona-header / .persona-avatar / .persona-tag removed — reemplazadas por las nuevas reglas en sección Investigación */
+.flow-steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.flow-step {
+  flex: 1;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  min-width: 140px;
+}
+.flow-step__label { font-size: 0.9rem; color: #ccc; margin-bottom: 8px; }
+.flow-step__status { font-size: 0.85rem; font-weight: 600; }
+.flow-step__status.bad { color: #FF6B6B; }
+.flow-arrow { font-size: 1.5rem; color: #F4A261; flex-shrink: 0; }
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+.case-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.conclusion p { font-size: 1.05rem; line-height: 1.8; margin-top: 16px; }
+.conclusion p:first-of-type {
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #7A4A2A;
+  font-weight: 600;
+}
+
+/* === Tipografía unificada con Santander ===
+   Labels: 20px / lh 1.8 (antes 14px / lh 1.5)
+   Subtítulos (.X-desc): 18px / lh 1.7 — matchea Santander
+   Especificidad 3 clases (X-section .case-section__inner .X-desc) para ganar al global
+   :global() del CaseStudyLayout que aplica 24px a .case-section > .case-section__inner > p
+   Títulos h2 ya estaban en 40px. Colores naranja/marrón/blanco-en-dark se conservan. */
+.desafio-label,
+.barreras-label,
+.investigacion-label,
+.journey-label,
+.propuesta-label,
+.funcionalidades-label,
+.humano-label,
+.impacto-label,
+.conclusion-label {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #A7A2A6;
+}
+
+.barreras-section .case-section__inner .barreras-desc,
+.investigacion-section .case-section__inner .investigacion-desc,
+.propuesta-section .case-section__inner .propuesta-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #766F6D;
+}
+
+.journey-section .case-section__inner .journey-desc,
+.humano-section .case-section__inner .humano-desc {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.impacto-section .impacto-inner .impacto-desc,
+.conclusion-section .conclusion-inner .conclusion-desc {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   ANIMATIONS — Replicado del patrón Santander con paleta naranja
+   ============================================================ */
+
+/* 1. Hover lift en cards con contenedor visible */
+.barreras-card,
+.propuesta-card,
+.funcionalidades-card,
+.humano-card,
+.impacto-card,
+.desafio-stat,
+.investigacion-block {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.barreras-card:hover,
+.propuesta-card:hover,
+.impacto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 126, 60, 0.15);
+}
+.barreras-card--highlight:hover,
+.propuesta-card--highlight:hover {
+  box-shadow: 0 8px 24px rgba(255, 72, 0, 0.22);
+}
+.funcionalidades-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 126, 60, 0.12);
+  border-color: #FF7E3C;
+}
+.humano-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+.desafio-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 126, 60, 0.18);
+}
+.desafio-stat:hover .desafio-stat__number {
+  text-shadow: 0 2px 16px rgba(255, 126, 60, 0.30);
+  transition: text-shadow 0.3s ease;
+}
+.investigacion-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 126, 60, 0.10);
+  border-color: #FFB07A;
+}
+
+/* 2. Botón hero con efecto refinado */
+.case-comida-para-todos .case-hero__btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.case-comida-para-todos .case-hero__btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(255, 72, 0, 0.35);
+}
+
+/* 3. Botón conclusion con efecto refinado */
+.conclusion-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.conclusion-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(255, 72, 0, 0.40);
+  opacity: 1;
+}
+
+/* 4. Journey steps con scale en círculos */
+.journey-step__circle {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.journey-step:hover .journey-step__circle {
+  transform: scale(1.12);
+  background-color: #FF7E3C;
+  color: #fff;
+  border-color: #FF7E3C;
+}
+
+/* 5. Persona card — sutil scale en foto */
+.persona-card__photo {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.persona-card:hover .persona-card__photo {
+  transform: scale(1.05);
+}
+
+/* 6. Humano card — zoom en imagen */
+.humano-card__photo img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.humano-card:hover .humano-card__photo img {
+  transform: scale(1.06);
+}
+
+/* 7. Stagger reveal — fade-in al entrar al viewport (solo con anim-ready) */
+.anim-ready .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.anim-ready .reveal:nth-child(1) { transition-delay: 0s; }
+.anim-ready .reveal:nth-child(2) { transition-delay: 0.08s; }
+.anim-ready .reveal:nth-child(3) { transition-delay: 0.16s; }
+.anim-ready .reveal:nth-child(4) { transition-delay: 0.24s; }
+.anim-ready .reveal:nth-child(5) { transition-delay: 0.32s; }
+
+/* 8. Líneas decorativas con drawing animation (solo con anim-ready) */
+.anim-ready .desafio-title-line,
+.anim-ready .barreras-title-line,
+.anim-ready .investigacion-title-line,
+.anim-ready .journey-title-line,
+.anim-ready .propuesta-title-line,
+.anim-ready .funcionalidades-title-line,
+.anim-ready .humano-title-line,
+.anim-ready .impacto-title-line,
+.anim-ready .conclusion-title-line {
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.15s;
+}
+.title-line-reveal.is-visible .desafio-title-line,
+.title-line-reveal.is-visible .barreras-title-line,
+.title-line-reveal.is-visible .investigacion-title-line,
+.title-line-reveal.is-visible .journey-title-line,
+.title-line-reveal.is-visible .propuesta-title-line,
+.title-line-reveal.is-visible .funcionalidades-title-line,
+.title-line-reveal.is-visible .humano-title-line,
+.title-line-reveal.is-visible .impacto-title-line,
+.title-line-reveal.is-visible .conclusion-title-line {
+  width: 96px;
+}
+
+/* 9. Quote conclusion + humano-quote — fade + sutil scale al entrar */
+.conclusion-quote,
+.humano-quote {
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.conclusion-quote.reveal,
+.humano-quote.reveal {
+  transform: translateY(24px) scale(0.98);
+}
+.conclusion-quote.reveal.is-visible,
+.humano-quote.reveal.is-visible {
+  transform: translateY(0) scale(1);
+}
+
+/* === Title-lines mobile: más cortas (56px) + alineadas al inicio del título === */
+@media (max-width: 600px) {
+  .desafio-title-group,
+  .barreras-title-group,
+  .investigacion-title-group,
+  .journey-title-group,
+  .propuesta-title-group,
+  .funcionalidades-title-group,
+  .humano-title-group,
+  .impacto-title-group,
+  .conclusion-title-group {
+    align-items: flex-start;
+  }
+  .desafio-title-line,
+  .barreras-title-line,
+  .investigacion-title-line,
+  .journey-title-line,
+  .propuesta-title-line,
+  .funcionalidades-title-line,
+  .humano-title-line,
+  .impacto-title-line,
+  .conclusion-title-line {
+    width: 56px;
+    margin-top: 16px;
+  }
+  /* Override del width final del drawing animation */
+  .title-line-reveal.is-visible .desafio-title-line,
+  .title-line-reveal.is-visible .barreras-title-line,
+  .title-line-reveal.is-visible .investigacion-title-line,
+  .title-line-reveal.is-visible .journey-title-line,
+  .title-line-reveal.is-visible .propuesta-title-line,
+  .title-line-reveal.is-visible .funcionalidades-title-line,
+  .title-line-reveal.is-visible .humano-title-line,
+  .title-line-reveal.is-visible .impacto-title-line,
+  .title-line-reveal.is-visible .conclusion-title-line {
+    width: 56px;
+  }
+}
+</style>
+
+<script is:inline>
+  // ============================================================
+  // Animation observer — Comida para Todos
+  // Marca grids reveal y title-groups, luego activa al entrar al viewport
+  // ============================================================
+  const initComidaAnimations = () => {
+    if (!('IntersectionObserver' in window)) return;
+    document.body.classList.add('anim-ready');
+
+    const revealGroups = [
+      '.desafio-stats', '.barreras-grid', '.investigacion-blocks',
+      '.journey-flow', '.propuesta-grid', '.funcionalidades-grid',
+      '.humano-grid', '.impacto-grid'
+    ];
+    revealGroups.forEach((sel) => {
+      document.querySelectorAll(sel).forEach((parent) => {
+        Array.from(parent.children).forEach((child) => child.classList.add('reveal'));
+      });
+    });
+
+    document.querySelectorAll('.conclusion-quote, .humano-quote').forEach((el) => el.classList.add('reveal'));
+    document.querySelectorAll('.persona-card, .desafio-quote-card').forEach((el) => el.classList.add('reveal'));
+
+    document.querySelectorAll(
+      '.desafio-title-group, .barreras-title-group, .investigacion-title-group, .journey-title-group, .propuesta-title-group, .funcionalidades-title-group, .humano-title-group, .impacto-title-group, .conclusion-title-group'
+    ).forEach((el) => el.classList.add('title-line-reveal'));
+
+    const targets = document.querySelectorAll('.reveal, .title-line-reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+
+    targets.forEach((el) => observer.observe(el));
+
+    setTimeout(() => {
+      targets.forEach((el) => {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
+          observer.unobserve(el);
+        }
+      });
+    }, 1500);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initComidaAnimations);
+  } else {
+    initComidaAnimations();
+  }
+</script>

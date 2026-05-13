@@ -1,0 +1,635 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const {
+  title,
+  titleHTML,
+  titleHighlight,
+  description,
+  client,
+  role,
+  duration,
+  durationLabel = 'DURACIÓN',
+  tags,
+  focus,
+  heroImage,
+  heroImageAlt,
+  heroImageSecondary,
+  heroImageSecondaryAlt,
+  floatingCardLabel,
+  floatingCardValue,
+  accentColor = '#FDE8E4',
+  headingColor = '#8B3A2A',
+  highlightColor,
+  brightColor,
+  heroBackground,
+  pageSlug,
+} = Astro.props;
+
+// Fallback: si no se pasa focus, joinea tags con " / "
+const focusText = focus || (tags && Array.isArray(tags) ? tags.join(' / ') : '');
+
+const heroStyle = [
+  heroBackground ? `background: ${heroBackground}` : `background-color: ${accentColor}`,
+  `--accent: ${accentColor}`,
+  `--case-heading: ${headingColor}`,
+  highlightColor ? `--highlight-color: ${highlightColor}` : '',
+  brightColor ? `--bright-color: ${brightColor}` : '',
+].filter(Boolean).join('; ');
+
+const articleClasses = ['case-study', pageSlug ? `case-${pageSlug}` : ''].filter(Boolean).join(' ');
+---
+
+<BaseLayout title={`${title} — Lady Pino`} description={description} activePage="proyectos">
+  <article class={articleClasses} style={`--accent: ${accentColor}; --case-heading: ${headingColor};`}>
+
+    <!-- Hero -->
+    <header class="case-hero" style={heroStyle}>
+      <div class="case-hero__inner container">
+        <div class="case-hero__text">
+          <a href="/#proyectos" class="back-link">
+            <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M34 6H2M2 6L8 1M2 6L8 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Volver atrás
+          </a>
+
+          <div class="case-hero__caso-group">
+            <span class="case-hero__caso-line"></span>
+            <span class="case-hero__caso-text">Caso de estudio - {client}</span>
+          </div>
+
+          <h1 class="case-hero__title">
+            {titleHTML
+              ? <Fragment set:html={titleHTML} />
+              : (<>
+                  {title}
+                  {titleHighlight && (<><br /><em class="case-hero__title-highlight">{titleHighlight}</em></>)}
+                </>)
+            }
+          </h1>
+
+          <p class="case-hero__desc">{description}</p>
+
+          <div class="case-hero__info">
+            {role && (
+              <div class="case-hero__info-item">
+                <span class="case-hero__info-label">ROL</span>
+                <p class="case-hero__info-value">{role}</p>
+              </div>
+            )}
+            {duration && (
+              <div class="case-hero__info-item">
+                <span class="case-hero__info-label">{durationLabel}</span>
+                <p class="case-hero__info-value">{duration}</p>
+              </div>
+            )}
+            {focusText && (
+              <div class="case-hero__info-item">
+                <span class="case-hero__info-label">ENFOQUE</span>
+                <p class="case-hero__info-value">{focusText}</p>
+              </div>
+            )}
+          </div>
+
+          <a href="#solucion" class="case-hero__btn">Ver solución</a>
+        </div>
+
+        <div class="case-hero__image">
+          <img class="case-hero__image-main" src={heroImage} alt={heroImageAlt} />
+          {heroImageSecondary && (
+            <img class="case-hero__image-secondary" src={heroImageSecondary} alt={heroImageSecondaryAlt} />
+          )}
+          {(floatingCardLabel && floatingCardValue) && (
+            <div class="case-hero__floating-card">
+              <span class="case-hero__floating-card__label">{floatingCardLabel}</span>
+              <strong class="case-hero__floating-card__value">{floatingCardValue}</strong>
+            </div>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <!-- Content slot -->
+    <div class="case-content">
+      <slot />
+    </div>
+
+  </article>
+</BaseLayout>
+
+<style>
+.case-study {
+  --accent: #FDE8E4;
+  --case-heading: #8B3A2A;
+  --highlight-color: #EF4D4D;
+  --bright-color: #EF4D4D;
+}
+
+.case-hero {
+  padding: 80px 0 100px;
+}
+
+.case-hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.case-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Volver atrás */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--case-heading);
+  margin-bottom: 4px;
+  transition: opacity 0.2s;
+}
+.back-link:hover { opacity: 0.7; }
+
+/* Santander: specs Figma del back-link (texto y flecha #A4665C) */
+.case-santander .back-link {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+
+/* Comida para Todos: specs Figma del back-link — Work Sans 20px / 400 / line-height 180% / letter-spacing 0 */
+.case-comida-para-todos .back-link {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+/* Comida para Todos: specs Figma del caso-text — Work Sans 24px / 500 / line-height 180% / letter-spacing 0 */
+.case-comida-para-todos .case-hero__caso-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+/* Santander: specs Figma del caso-group (línea + "Caso de estudio - {client}") */
+.case-santander .case-hero__caso-line {
+  background-color: #A4665C;
+}
+.case-santander .case-hero__caso-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+
+/* MACH: textos del hero (back-link + caso-group) en marrón rosado #A4665C — pedido específico de Lady */
+.case-mach .back-link {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+.case-mach .case-hero__caso-line {
+  background-color: #A4665C;
+}
+.case-mach .case-hero__caso-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+
+/* Caso de estudio - {client} con línea */
+.case-hero__caso-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+.case-hero__caso-line {
+  flex-shrink: 0;
+  width: 80px;
+  height: 2px;
+  background-color: var(--case-heading);
+  border-radius: 2px;
+}
+.case-hero__caso-text {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--case-heading);
+}
+
+/* Título principal con highlight cursivo */
+.case-hero__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--case-heading);
+  margin: 4px 0 8px;
+}
+/* :global() para soportar tanto la prop titleHighlight (JSX) como titleHTML (set:html) — los elementos inyectados via set:html no reciben las marcas scoped de Astro */
+.case-hero :global(.case-hero__title-highlight) {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--highlight-color);
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* Descripción */
+.case-hero__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #766F6D;
+  max-width: 520px;
+  margin: 8px 0 16px;
+}
+
+/* Info: 3 columnas con divisor vertical */
+.case-hero__info {
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
+  margin: 8px 0 16px;
+}
+.case-hero__info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 32px;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  min-width: 120px;
+}
+.case-hero__info-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+.case-hero__info-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--highlight-color);
+}
+.case-hero__info-value {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #4A4A4A;
+}
+
+/* Botón Ver solución (color brillante por case study) */
+.case-hero__btn {
+  display: inline-block;
+  background-color: var(--bright-color);
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  align-self: flex-start;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+.case-hero__btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Imagen lateral */
+.case-hero__image {
+  position: relative;
+}
+.case-hero__image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  display: block;
+}
+
+/* Card flotante (ej. "Usuarios atendidos +2.400 familias") — posicionada bottom-right del contenedor de la imagen */
+.case-hero__floating-card {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  z-index: 3;
+}
+.case-hero__floating-card__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #A7A2A6;
+  letter-spacing: 0.02em;
+}
+.case-hero__floating-card__value {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--bright-color, #F26B3D);
+  line-height: 1.2;
+}
+
+/* MACH: phones bajados + card alineada horizontalmente con "Volver atrás" al top — matchea Figma
+   align-items: start es CRÍTICO — el default `center` desincroniza la card del back-link en viewports grandes
+   porque la imagen es más alta y el centro del row baja. Con `start` ambas columnas anclan tops al row top */
+.case-mach .case-hero__inner {
+  align-items: start;
+}
+.case-mach .case-hero__image-main {
+  margin-top: 160px;
+  position: relative;
+  z-index: 2;
+}
+.case-mach .case-hero__floating-card {
+  top: 0;
+  bottom: auto;
+  right: -16px;
+}
+
+/* Santander: laptop más grande + funnel overlay arriba-derecha */
+.case-santander .case-hero {
+  overflow: hidden; /* recorta la laptop al borde inferior cuando se desborda */
+}
+.case-santander .case-hero__inner {
+  grid-template-columns: 1fr 1.35fr;
+}
+.case-santander .case-hero__image {
+  align-self: end;
+  margin-bottom: -100px; /* desborda el padding-bottom del hero para tocar el borde sin afectar el texto */
+}
+.case-santander .case-hero__image-main {
+  width: 115%;
+  max-width: none;
+  transform: translate(-2%, 80px); /* baja solo la laptop — el funnel queda en su sitio */
+  position: relative;
+  z-index: 2;
+}
+.case-santander .case-hero__image-secondary {
+  position: absolute;
+  top: -32px;
+  right: -24px;
+  width: 28%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+
+/* Comida para Todos: hero compacto (drive del text), imagen absoluta con altura natural que desborda hacia la siguiente sección */
+.case-comida-para-todos .case-hero {
+  overflow: visible;
+  padding-bottom: 160px; /* hero más alto para que el bg amarillo cubra hasta debajo del botón sin difuminar */
+}
+.case-comida-para-todos .case-hero__inner {
+  align-items: start;
+}
+/* Container del image con height 0 → no contribuye al alto del grid row, el row lo determina el text */
+.case-comida-para-todos .case-hero__image {
+  position: relative;
+  height: 0;
+  overflow: visible;
+}
+/* Imagen con altura fija (820px) + width auto + centrado horizontal — phones desplazados hacia abajo para que la punta inferior se desborde hacia la sección blanca siguiente (matchea Figma + patrón Santander) */
+.case-comida-para-todos .case-hero__image-main {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  height: 820px;
+  transform: translate(-50%, 80px);
+  z-index: 2;
+}
+/* Card flotante a la derecha de los teléfonos — sigue el desplazamiento de los phones */
+.case-comida-para-todos .case-hero__floating-card {
+  top: 540px;
+  bottom: auto;
+  right: -32px;
+  transform: none;
+}
+
+/* Responsive: mobile/tablet pequeño (≤900px) — el grid colapsa a 1 col, layout vertical limpio sin transforms ni absolutes */
+@media (max-width: 900px) {
+  .case-comida-para-todos .case-hero {
+    padding-bottom: 60px;
+  }
+  .case-comida-para-todos .case-hero__image {
+    height: auto;
+    margin-top: 24px;
+  }
+  .case-comida-para-todos .case-hero__image-main {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    transform: none;
+    z-index: auto;
+  }
+  .case-comida-para-todos .case-hero__floating-card {
+    position: absolute;
+    top: auto;
+    bottom: 16px;
+    right: 16px;
+    transform: none;
+  }
+}
+
+/* Section styles reusables dentro del case study */
+.case-content :global(.case-section) {
+  padding: 72px 0;
+}
+
+.case-content :global(.case-section__inner) {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Typography shared across all case studies — matches index/sobre-mi pattern */
+.case-content :global(.case-section h2) {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: var(--case-heading);
+  margin-bottom: 16px;
+}
+
+.case-content :global(.case-section > .case-section__inner > p),
+.case-content :global(.case-section h2 + p) {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: #766F6D;
+}
+
+.case-content :global(.case-section--dark .case-section__inner > p),
+.case-content :global(.case-section--dark h2 + p) {
+  color: #ccc;
+}
+
+.case-content :global(.case-section--dark) {
+  background-color: #1A1A1A;
+  color: #fff;
+}
+
+.case-content :global(.case-section--dark h2),
+.case-content :global(.case-section--dark h3) {
+  color: #fff;
+}
+
+.case-content :global(.stats-grid) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.case-content :global(.stat-card) {
+  background-color: var(--accent);
+  border-radius: var(--border-radius);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.case-content :global(.stat-number) {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--case-heading);
+}
+
+.case-content :global(.stat-label) {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F6D;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .case-hero {
+    padding: 48px 0 64px;
+  }
+  /* Forzar 1 columna en mobile para los 3 case studies (sobreescribe las reglas scoped). */
+  .case-hero__inner,
+  .case-santander .case-hero__inner,
+  .case-mach .case-hero__inner,
+  .case-comida-para-todos .case-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: stretch;
+  }
+  /* Ocultar la imagen del hero en mobile — el contenedor del texto ocupa todo el ancho.
+     Consistente con el patrón aplicado a las project cards del home. */
+  .case-hero__image,
+  .case-santander .case-hero__image,
+  .case-mach .case-hero__image-main,
+  .case-comida-para-todos .case-hero__image {
+    display: none;
+  }
+  .case-hero__floating-card {
+    display: none; /* sin imagen tampoco tiene sentido la card flotante */
+  }
+  /* Tipografía mantenida igual a desktop por pedido de José.
+     Solo se ajusta el layout del .case-hero__info para que wrappee bien sin divisores. */
+  .case-hero__info {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .case-hero__info-item {
+    padding-right: 16px;
+    border-right: none;
+    min-width: 100px;
+  }
+
+  .case-content :global(.case-section) {
+    padding: 56px 0;
+  }
+  .case-content :global(.case-section__inner) {
+    padding: 0 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-hero {
+    padding: 32px 0 48px;
+  }
+  /* Padding lateral del container .case-hero__inner: aumentado para respiración en mobile pequeño */
+  .case-hero__inner {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .case-content :global(.case-section) {
+    padding: 48px 0;
+  }
+  .case-content :global(.case-section__inner) {
+    padding: 0 24px;
+  }
+
+  /* Hero caso-group: línea horizontal alineada al inicio del texto (row),
+     mismo patrón en los 3 case studies (Santander / MACH / Comida) en mobile.
+     Tipografía mantenida igual a desktop por pedido de José — el texto wrappea
+     en varias líneas pero conserva su escala de 24px. */
+  .case-hero__caso-group {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .case-hero__caso-line {
+    width: 56px;
+    flex-shrink: 0;
+    margin-top: 18px; /* alineado con el centro de la 1ª línea del texto a 24px */
+  }
+  .case-santander .case-hero__caso-text,
+  .case-mach .case-hero__caso-text,
+  .case-comida-para-todos .case-hero__caso-text {
+    flex: 1;
+  }
+}
+</style>

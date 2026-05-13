@@ -1,0 +1,1371 @@
+---
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+---
+
+<CaseStudyLayout
+  title="Optimización de conversión en"
+  titleHighlight="seguros digitales"
+  description="Rediseño del funnel de contratación enfocado en mejorar la conversión y la calidad de entrada mediante UX, CRO y analítica."
+  client="Banco Santander"
+  role="Product Designer"
+  duration="6 - 8 semanas"
+  focus="UX / CRO / Data"
+  heroImage="/assets/laptopSantander.png"
+  heroImageAlt="Dashboard Banco Santander"
+  heroImageSecondary="/assets/FunnelSantander.png"
+  heroImageSecondaryAlt="Análisis del funnel de conversión Santander"
+  accentColor="#FDE8E4"
+  headingColor="#3D3D3D"
+  highlightColor="#EF4D4D"
+  brightColor="#EF4D4D"
+  heroBackground="linear-gradient(180deg, #FFB4B5 0%, #FFFFFF 100%)"
+  pageSlug="santander"
+>
+
+  <!-- El Desafío -->
+  <section class="case-section desafio-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label desafio-label">01 - CONTEXTO</span>
+      <div class="desafio-title-group">
+        <span class="desafio-title-line"></span>
+        <h2 class="desafio-title">El <em>Desafío</em></h2>
+      </div>
+      <p class="desafio-desc">El proceso de contratación presentaba fricciones relevantes que afectaban la conversión, generando abandono en etapas críticas del funnel.</p>
+
+      <div class="desafio-grid">
+        <!-- Columna izquierda: 4 challenges -->
+        <div class="challenge-list">
+          <div class="challenge-item">
+            <svg class="challenge-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+            <p>Fricción en el flujo de contratación que generaba confusión y desconfianza en el usuario.</p>
+          </div>
+          <div class="challenge-item">
+            <svg class="challenge-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="5" width="16" height="14" rx="2" />
+              <path d="M8 10h8M8 14h5" />
+            </svg>
+            <p>Baja claridad en la comunicación de beneficios y coberturas del producto.</p>
+          </div>
+          <div class="challenge-item">
+            <svg class="challenge-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="9" r="3" />
+              <path d="M3 20c0-3 3-5 6-5s6 2 6 5" />
+              <circle cx="17" cy="8" r="2.5" />
+              <path d="M15 20c0-2 2-3.5 4-3.5" />
+            </svg>
+            <p>Abandono en etapas clave del funnel, especialmente en la fase de inicio.</p>
+          </div>
+          <div class="challenge-item">
+            <svg class="challenge-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+            </svg>
+            <p>Desconfianza en el proceso derivada de falta de señales de seguridad y validación.</p>
+          </div>
+        </div>
+
+        <!-- Columna derecha: panel de stats -->
+        <div class="stats-panel">
+          <div class="desafio-stat desafio-stat--abandono">
+            <span class="desafio-stat__label">TASA DE ABANDONO INICIAL</span>
+            <span class="desafio-stat__number">68<sup>%</sup></span>
+            <p class="desafio-stat__desc">de usuarios no completaban el flujo</p>
+          </div>
+          <div class="desafio-stat">
+            <span class="desafio-stat__label">PRINCIPAL PUNTO DE FUGA</span>
+            <p class="desafio-stat__title">Etapa 1 — Inicio del flujo</p>
+            <p class="desafio-stat__desc">Formulario inicial con exceso de campos y baja percepción de valor.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objetivos -->
+  <section class="case-section objetivos-section" style="background: #FEF2F0;">
+    <div class="case-section__inner">
+      <span class="section-label objetivos-label">02 - DIRECCIÓN</span>
+      <div class="objetivos-title-group">
+        <span class="objetivos-title-line"></span>
+        <h2 class="objetivos-title">Objetivos <em>del proyecto</em></h2>
+      </div>
+      <p class="objetivos-desc">Definimos cuatro objetivos concretos, medibles y alineados con el negocio para orientar cada decisión de diseño.</p>
+      <div class="objectives-grid">
+        <div class="objective-card">
+          <span class="objective-num">01</span>
+          <p>Optimizar la eficiencia del funnel de contratación.</p>
+        </div>
+        <div class="objective-card">
+          <span class="objective-num">02</span>
+          <p>Reducir fricciones en etapas críticas de entrada.</p>
+        </div>
+        <div class="objective-card">
+          <span class="objective-num">03</span>
+          <p>Mejorar la calidad de leads y la intención real de compra.</p>
+        </div>
+        <div class="objective-card">
+          <span class="objective-num">04</span>
+          <p>Aumentar la tasa de conversión global del proceso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enfoque de trabajo -->
+  <section class="case-section enfoque-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label enfoque-label">03 - PROCESO</span>
+      <div class="enfoque-title-group">
+        <span class="enfoque-title-line"></span>
+        <h2 class="enfoque-title">Enfoque de <em>trabajo</em></h2>
+      </div>
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="process-step__circle">01</div>
+          <h4 class="process-step__title">Investigación</h4>
+          <p class="process-step__desc">Entrevistas, heurísticas y análisis de datos existentes.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step__circle">02</div>
+          <h4 class="process-step__title">Análisis</h4>
+          <p class="process-step__desc">Mapeo del funnel, identificación de fricciones y oportunidades.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step__circle">03</div>
+          <h4 class="process-step__title">Diseño</h4>
+          <p class="process-step__desc">Wireframes, prototipos y revisión con stakeholders.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step__circle">04</div>
+          <h4 class="process-step__title">Iteración</h4>
+          <p class="process-step__desc">Pruebas de usabilidad, ajustes y validación final.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights clave -->
+  <section class="case-section insights-section" style="background: #FEF2F0;">
+    <div class="case-section__inner">
+      <span class="section-label insights-label">04 - DESCUBRIMIENTO</span>
+      <div class="insights-title-group">
+        <span class="insights-title-line"></span>
+        <h2 class="insights-title">Insights <em>clave</em></h2>
+      </div>
+      <p class="insights-desc">La investigación reveló patrones consistentes que explicaban el comportamiento de abandono de los usuarios.</p>
+
+      <div class="insights-grid">
+        <div class="insight-card">
+          <span class="insight-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" />
+            </svg>
+          </span>
+          <h4 class="insight-card__title">Exceso de pasos en el flujo</h4>
+          <p class="insight-card__desc">El proceso requería más pasos de los necesarios para una primera cotización, generando fatiga y abandono antes de llegar al valor real del producto.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </span>
+          <h4 class="insight-card__title">Falta de claridad en el inicio</h4>
+          <p class="insight-card__desc">Los usuarios abandonaban al no entender qué información se les pedía ni para qué. El formulario de entrada no comunicaba valor antes de solicitar datos.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 3v18" />
+            </svg>
+          </span>
+          <h4 class="insight-card__title">Información poco estructurada</h4>
+          <p class="insight-card__desc">La jerarquía visual y la arquitectura de información no guiaban al usuario. El contenido era denso y las acciones clave no destacaban con suficiente claridad.</p>
+        </div>
+        <div class="insight-card">
+          <span class="insight-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </span>
+          <h4 class="insight-card__title">Baja percepción de valor</h4>
+          <p class="insight-card__desc">Los beneficios del seguro no se comunicaban de forma clara ni progresiva. Los usuarios no tenían suficiente contexto para justificar el tiempo invertido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Análisis del funnel -->
+  <section class="case-section analisis-section" style="background-color: #fff;">
+    <div class="case-section__inner">
+      <span class="section-label analisis-label">05 - DIAGNOSTICO</span>
+      <div class="analisis-title-group">
+        <span class="analisis-title-line"></span>
+        <h2 class="analisis-title">Análisis del <em>funnel</em></h2>
+      </div>
+
+      <div class="analisis-grid">
+        <!-- Columna izquierda: card con barras de tasa de paso -->
+        <div class="analisis-funnel-card">
+          <span class="analisis-funnel-card__label">TASA DE PASO POR ETAPA — ESTADO INICIAL</span>
+          <div class="funnel-stages">
+            <div class="funnel-stage">
+              <div class="funnel-stage__row">
+                <span class="funnel-stage__name">Inicio del flujo</span>
+                <span class="funnel-stage__value">100%</span>
+              </div>
+              <div class="funnel-stage__bar"><span style="width: 100%; background-color: #8B4F44;"></span></div>
+            </div>
+            <div class="funnel-stage">
+              <div class="funnel-stage__row">
+                <span class="funnel-stage__name">Datos personales</span>
+                <span class="funnel-stage__value">54%</span>
+              </div>
+              <div class="funnel-stage__bar"><span style="width: 54%; background-color: #B5685A;"></span></div>
+            </div>
+            <div class="funnel-stage">
+              <div class="funnel-stage__row">
+                <span class="funnel-stage__name">Selección cobertura</span>
+                <span class="funnel-stage__value">38%</span>
+              </div>
+              <div class="funnel-stage__bar"><span style="width: 38%; background-color: #D08F82;"></span></div>
+            </div>
+            <div class="funnel-stage">
+              <div class="funnel-stage__row">
+                <span class="funnel-stage__name">Pago</span>
+                <span class="funnel-stage__value">32%</span>
+              </div>
+              <div class="funnel-stage__bar"><span style="width: 32%; background-color: #DEAA9D;"></span></div>
+            </div>
+            <div class="funnel-stage">
+              <div class="funnel-stage__row">
+                <span class="funnel-stage__name">Contratación</span>
+                <span class="funnel-stage__value">28%</span>
+              </div>
+              <div class="funnel-stage__bar"><span style="width: 28%; background-color: #E8C0B5;"></span></div>
+            </div>
+          </div>
+          <div class="analisis-funnel-card__footer">
+            <span class="analisis-funnel-card__footer-label">Mayor punto de fuga detectado</span>
+            <strong class="analisis-funnel-card__footer-value">Etapa 1-2 (-46%)</strong>
+          </div>
+        </div>
+
+        <!-- Columna derecha: texto + hipótesis + mini-cards -->
+        <div class="analisis-content">
+          <p class="analisis-content__intro">El análisis permitió identificar que el mayor punto de abandono se concentraba en la etapa inicial del flujo, evidenciando un problema de entrada más que de cierre.</p>
+
+          <div class="analisis-hipotesis">
+            <span class="analisis-hipotesis__label">HIPÓTESIS PRINCIPAL</span>
+            <p class="analisis-hipotesis__text">La fricción en el inicio del flujo tiene mayor impacto en la conversión que cualquier otra etapa. Optimizar la entrada genera el retorno más alto.</p>
+          </div>
+
+          <div class="analisis-mini-cards">
+            <div class="analisis-mini-card">
+              <span class="analisis-mini-card__label">Campos en formulario inicial</span>
+              <span class="analisis-mini-card__number">11</span>
+              <span class="analisis-mini-card__desc">campos requeridos</span>
+            </div>
+            <div class="analisis-mini-card">
+              <span class="analisis-mini-card__label">Tiempo promedio antes de abandonar</span>
+              <span class="analisis-mini-card__number">48s</span>
+              <span class="analisis-mini-card__desc">en etapa inicial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Propuesta de solución -->
+  <section class="case-section propuesta-section" style="background: #FEF2F0;" id="solucion">
+    <div class="case-section__inner">
+      <div class="propuesta-disclaimer">
+        <p>Este proyecto fue desarrollado en un entorno de trabajo real bajo acuerdos de confidencialidad. Por este motivo, no es posible compartir interfaces finales ni material propietario. El contenido presentado refleja el proceso, análisis y resultados obtenidos.</p>
+      </div>
+
+      <span class="section-label propuesta-label">06 - PROPUESTA</span>
+      <div class="propuesta-title-group">
+        <span class="propuesta-title-line"></span>
+        <h2 class="propuesta-title">Propuesta de <em>solución</em></h2>
+      </div>
+      <p class="propuesta-desc">Se rediseñó el flujo priorizando claridad, reducción de fricción y mejor jerarquía de información. Cada decisión de diseño respondía a un dato del análisis previo.</p>
+
+      <div class="propuesta-screens">
+        <div class="propuesta-screen">
+          <img src="/assets/propuestaSolucion1.png" alt="Pantalla 01 — Inicio simplificado" class="propuesta-screen__img" />
+          <div class="propuesta-screen__body">
+            <span class="propuesta-screen__label">PANTALLA 01</span>
+            <p class="propuesta-screen__desc">Inicio simplificado — propuesta de valor antes de datos</p>
+          </div>
+        </div>
+        <div class="propuesta-screen">
+          <img src="/assets/propuestaSolucion2.png" alt="Pantalla 02 — Flujo progresivo" class="propuesta-screen__img" />
+          <div class="propuesta-screen__body">
+            <span class="propuesta-screen__label">PANTALLA 02</span>
+            <p class="propuesta-screen__desc">Flujo progresivo — campos mínimos por etapa</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="propuesta-pillars">
+        <div class="propuesta-pillar">
+          <span class="propuesta-pillar__label">CAMBIOS ESTRUCTURALES</span>
+          <p class="propuesta-pillar__desc">De 11 campos a 3 en la pantalla inicial. Flujo dividido en etapas cortas con progreso visible.</p>
+        </div>
+        <div class="propuesta-pillar">
+          <span class="propuesta-pillar__label">JERARQUÍA VISUAL</span>
+          <p class="propuesta-pillar__desc">Rediseño de la arquitectura de información. Beneficios visibles antes de solicitar datos.</p>
+        </div>
+        <div class="propuesta-pillar">
+          <span class="propuesta-pillar__label">SEÑALES DE CONFIANZA</span>
+          <p class="propuesta-pillar__desc">Incorporación de validadores, sellos de seguridad y testimonios en etapas clave del flujo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impacto -->
+  <section class="case-section impacto-section" style="background-color: #fff;">
+    <div class="case-section__inner impacto-inner">
+      <span class="section-label impacto-label">07 - DIAGNOSTICO</span>
+      <div class="impacto-title-group">
+        <span class="impacto-title-line"></span>
+        <h2 class="impacto-title">Impacto en el <em>negocio</em></h2>
+      </div>
+      <p class="impacto-desc">Los resultados fueron medidos en las 4 semanas posteriores al lanzamiento del rediseño en producción.</p>
+
+      <div class="impacto-stats">
+        <div class="impacto-stat">
+          <span class="impacto-stat__number">+25<sup>%</sup></span>
+          <span class="impacto-stat__label">Conversión en inicio de flujo</span>
+        </div>
+        <div class="impacto-stat">
+          <span class="impacto-stat__number">−18<sup>%</sup></span>
+          <span class="impacto-stat__label">Abandono en primera etapa</span>
+        </div>
+        <div class="impacto-stat">
+          <span class="impacto-stat__number">+12<sup>%</sup></span>
+          <span class="impacto-stat__label">Calidad de leads generados</span>
+        </div>
+        <div class="impacto-stat">
+          <span class="impacto-stat__number">−20<sup>%</sup></span>
+          <span class="impacto-stat__label">Tiempo de decisión del usuario</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusión -->
+  <section class="case-section conclusion-section" style="background-color: #FEF2F0;">
+    <div class="case-section__inner conclusion-inner">
+      <span class="section-label conclusion-label">08 - CIERRE</span>
+      <div class="conclusion-title-group">
+        <span class="conclusion-title-line"></span>
+        <h2 class="conclusion-title">Conclusión</h2>
+      </div>
+      <p class="conclusion-desc">El rediseño permitió transformar un flujo con alta fricción en una experiencia más clara, eficiente y alineada con los objetivos del negocio. Al priorizar la entrada del funnel, cada mejora tuvo un efecto multiplicador sobre todas las etapas posteriores.</p>
+      <a href="/#proyectos" class="conclusion-btn">Ver mas proyectos</a>
+    </div>
+  </section>
+
+</CaseStudyLayout>
+
+<!-- Navbar rosa solo en case study Santander (mismo color del top del gradient) -->
+<style is:global>
+  body:has(.case-santander) .navbar {
+    background-color: #FFB4B5;
+  }
+
+  /* Nota: la regla del .case-hero__caso-group en mobile está en CaseStudyLayout.astro
+     (compartida por los 3 case studies). Aquí la quitamos para evitar overrides locales
+     que pisen la tipografía desktop. */
+</style>
+
+<style>
+/* Header de sección — label numerado sin línea + título con línea roja + highlight cursivo
+   Compartido por: Desafío, Objetivos, Enfoque (y futuras secciones que apliquen el mismo patrón) */
+.desafio-label,
+.objetivos-label,
+.enfoque-label,
+.insights-label,
+.analisis-label,
+.propuesta-label,
+.impacto-label,
+.conclusion-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A7A2A6;
+  display: block;
+  margin-bottom: 16px;
+  text-transform: none;
+}
+.desafio-label::before,
+.objetivos-label::before,
+.enfoque-label::before,
+.insights-label::before,
+.analisis-label::before,
+.propuesta-label::before,
+.impacto-label::before,
+.conclusion-label::before { display: none; }
+
+.desafio-title-group,
+.objetivos-title-group,
+.enfoque-title-group,
+.insights-title-group,
+.analisis-title-group,
+.propuesta-title-group,
+.impacto-title-group,
+.conclusion-title-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.desafio-title-line,
+.objetivos-title-line,
+.enfoque-title-line,
+.insights-title-line,
+.analisis-title-line,
+.propuesta-title-line,
+.impacto-title-line,
+.conclusion-title-line {
+  flex-shrink: 0;
+  width: 96px;
+  height: 2px;
+  background-color: #EF4D4D;
+  border-radius: 2px;
+}
+.desafio-title-group .desafio-title,
+.objetivos-title-group .objetivos-title,
+.enfoque-title-group .enfoque-title,
+.insights-title-group .insights-title,
+.analisis-title-group .analisis-title,
+.propuesta-title-group .propuesta-title,
+.impacto-title-group .impacto-title,
+.conclusion-title-group .conclusion-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #3D3D3D;
+  margin: 0;
+}
+.desafio-title-group .desafio-title em,
+.objetivos-title-group .objetivos-title em,
+.enfoque-title-group .enfoque-title em,
+.insights-title-group .insights-title em,
+.analisis-title-group .analisis-title em,
+.propuesta-title-group .propuesta-title em,
+.impacto-title-group .impacto-title em {
+  font-family: 'Work Sans', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #EF4D4D;
+}
+.desafio-section .case-section__inner .desafio-desc,
+.objetivos-section .case-section__inner .objetivos-desc,
+.insights-section .case-section__inner .insights-desc,
+.propuesta-section .case-section__inner .propuesta-desc,
+.impacto-section .case-section__inner .impacto-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #4A4A4A;
+  margin-bottom: 40px;
+}
+
+/* Grid 2 columnas: challenges (izquierda) + panel stats (derecha) */
+.desafio-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Cards de challenges — borde rojo + icono SVG */
+.challenge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.challenge-item {
+  background: #FEE5E5;
+  border: 1px solid #E0DAD7;
+  border-left: 3px solid #EF4D4D;
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.challenge-item p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #4A4A4A;
+  margin: 0;
+}
+.challenge-icon {
+  flex-shrink: 0;
+  color: #A4665C;
+  margin-top: 2px;
+}
+
+/* Panel de stats apilado a la derecha */
+.stats-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.desafio-stat {
+  background: #FEE5E5;
+  border: 1px solid #E0DAD7;
+  border-radius: 12px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.desafio-stat__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #A4665C;
+  text-transform: uppercase;
+}
+.desafio-stat__number {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  color: #A4665C;
+  margin: 4px 0;
+}
+.desafio-stat__number sup {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+  vertical-align: super;
+  margin-left: 2px;
+}
+.desafio-stat__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #3D3D3D;
+  margin: 4px 0;
+}
+.desafio-stat__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #766F6D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .desafio-grid { grid-template-columns: 1fr; }
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+@media (max-width: 600px) {
+  .objectives-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.objective-card {
+  background: #fff;
+  border: 1px solid #E8D5CE;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.objective-num {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  color: #D9D5D2;
+}
+.objective-card p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: #3D3D3D;
+  margin: 0;
+}
+
+/* Process flow — 4 círculos numerados conectados con línea horizontal */
+.process-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 48px;
+}
+.process-flow::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: #D9C8C2;
+  z-index: 0;
+}
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 12px;
+}
+.process-step__circle {
+  width: 64px;
+  height: 64px;
+  border: 1.5px solid #A4665C;
+  border-radius: 50%;
+  background: #FEF2F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #A4665C;
+  margin-bottom: 24px;
+}
+.process-step__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #3D3D3D;
+  margin: 0 0 8px;
+}
+.process-step__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #A7A2A6;
+  margin: 0;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 8px;
+}
+.insight-card {
+  background: #fff;
+  border: 1px solid #E8D5CE;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.insight-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #FEF2F0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #A4665C;
+}
+.insight-card__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #3D3D3D;
+  margin: 8px 0 0;
+}
+.insight-card__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  margin: 0;
+}
+
+/* Sección Propuesta de solución */
+.propuesta-disclaimer {
+  margin-bottom: 40px;
+  border: 1px solid #EF4D4D;
+  border-radius: 4px;
+  padding: 20px 24px;
+}
+.propuesta-disclaimer p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px !important;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #766F6D;
+  margin: 0;
+}
+.propuesta-screens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 8px;
+}
+.propuesta-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+.propuesta-screen__img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.propuesta-screen__body {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #E8D5CE;
+  border-radius: 12px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.propuesta-screen__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #A7A2A6;
+  text-transform: uppercase;
+}
+.propuesta-screen__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #3D3D3D;
+  margin: 0;
+}
+.propuesta-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+  border-top: 1px solid #E8D5CE;
+  padding-top: 32px;
+}
+.propuesta-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.propuesta-pillar__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #A7A2A6;
+  text-transform: uppercase;
+}
+.propuesta-pillar__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #3D3D3D;
+  margin: 0;
+}
+
+/* Solution images legacy (no se usa, mantenido por compat por si otra sección lo necesita) */
+.solution-images {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* Sección Impacto en el negocio — header centrado + 4 stat cards */
+.impacto-inner {
+  text-align: center;
+}
+.impacto-inner .impacto-label {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.impacto-inner .impacto-title-group {
+  justify-content: center;
+}
+.impacto-section .case-section__inner .impacto-desc {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.impacto-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.impacto-stat {
+  background: #fff;
+  border: 1px solid #E8D5CE;
+  border-radius: 12px;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.impacto-stat__number {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  color: #A4665C;
+  letter-spacing: -0.02em;
+}
+.impacto-stat__number sup {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  vertical-align: super;
+  margin-left: 2px;
+}
+.impacto-stat__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #766F6D;
+  max-width: 180px;
+}
+
+@media (max-width: 900px) {
+  .impacto-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .impacto-stats { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .propuesta-screens { grid-template-columns: 1fr; }
+  .propuesta-pillars { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Sección Análisis del funnel — layout 2 columnas */
+.analisis-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  margin-top: 8px;
+  align-items: start;
+}
+
+/* Columna izquierda: card de funnel */
+.analisis-funnel-card {
+  background: #F7EDE6;
+  border: 1px solid #E8D5CE;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.analisis-funnel-card__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #A7A2A6;
+  text-transform: uppercase;
+}
+.funnel-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.funnel-stage__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.funnel-stage__name {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3D3D3D;
+}
+.funnel-stage__value {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3D3D3D;
+}
+.funnel-stage__bar {
+  width: 100%;
+  height: 12px;
+  background: #F4DDD6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.funnel-stage__bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+}
+.analisis-funnel-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #E8D5CE;
+  padding-top: 16px;
+  margin-top: 4px;
+}
+.analisis-funnel-card__footer-label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #A7A2A6;
+}
+.analisis-funnel-card__footer-value {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #EF4D4D;
+}
+
+/* Columna derecha: contenido */
+.analisis-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.analisis-content__intro {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4A4A4A;
+  margin: 0;
+}
+.analisis-hipotesis {
+  background: #F7EDE6;
+  border: 1px solid #E8D5CE;
+  border-left: 3px solid #EF4D4D;
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.analisis-hipotesis__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #A4665C;
+  text-transform: uppercase;
+}
+.analisis-hipotesis__text {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #3D3D3D;
+  margin: 0;
+}
+.analisis-mini-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.analisis-mini-card {
+  background: #F7EDE6;
+  border: 1px solid #E8D5CE;
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.analisis-mini-card__label {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #A7A2A6;
+}
+.analisis-mini-card__number {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #A4665C;
+}
+.analisis-mini-card__desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #766F6D;
+}
+
+@media (max-width: 900px) {
+  .analisis-grid { grid-template-columns: 1fr; }
+  .analisis-mini-cards { grid-template-columns: 1fr; }
+}
+.case-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Sección Conclusión — header centrado + texto + botón */
+.conclusion-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conclusion-inner .conclusion-label {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.conclusion-inner .conclusion-title-group {
+  justify-content: center;
+}
+.conclusion-section .case-section__inner .conclusion-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #4A4A4A;
+  max-width: 720px;
+  margin: 16px auto 32px;
+  text-align: center;
+}
+.conclusion-btn {
+  display: inline-block;
+  background-color: #EF4D4D;
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+.conclusion-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   ANIMATIONS — Sprint 1 + 2
+   ============================================================ */
+
+/* 1. Hover lift en cards con contenedor visible (los pillars sin bg/border excluidos para evitar texto flotante) */
+.challenge-item,
+.objective-card,
+.insight-card,
+.impacto-stat,
+.analisis-mini-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.challenge-item:hover,
+.insight-card:hover,
+.analisis-mini-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(239, 77, 77, 0.12);
+}
+.objective-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(239, 77, 77, 0.10);
+  border-color: #EF4D4D;
+}
+.impacto-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(239, 77, 77, 0.15);
+}
+.impacto-stat:hover .impacto-stat__number {
+  text-shadow: 0 2px 16px rgba(239, 77, 77, 0.25);
+  transition: text-shadow 0.3s ease;
+}
+
+/* 2. Botón hero con efecto refinado */
+.case-santander .case-hero__btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.case-santander .case-hero__btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(239, 77, 77, 0.32);
+}
+
+/* 3. Process steps con scale en círculos */
+.process-step__circle {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.process-step:hover .process-step__circle {
+  transform: scale(1.12);
+  background-color: #EF4D4D;
+  color: #fff;
+  border-color: #EF4D4D;
+}
+
+/* 4. Stagger reveal — fade-in al entrar al viewport */
+/* Progressive enhancement: opacity:0 solo cuando body tiene .anim-ready (JS cargó OK).
+   Sin JS, todo el contenido es visible por default — no más cards vacías en mobile. */
+.anim-ready .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.anim-ready .reveal:nth-child(1) { transition-delay: 0s; }
+.anim-ready .reveal:nth-child(2) { transition-delay: 0.08s; }
+.anim-ready .reveal:nth-child(3) { transition-delay: 0.16s; }
+.anim-ready .reveal:nth-child(4) { transition-delay: 0.24s; }
+.anim-ready .reveal:nth-child(5) { transition-delay: 0.32s; }
+
+/* 5. Líneas decorativas con drawing animation (solo con anim-ready) */
+.anim-ready .desafio-title-line,
+.anim-ready .objetivos-title-line,
+.anim-ready .enfoque-title-line,
+.anim-ready .insights-title-line,
+.anim-ready .analisis-title-line,
+.anim-ready .propuesta-title-line,
+.anim-ready .impacto-title-line,
+.anim-ready .conclusion-title-line {
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.15s;
+}
+.anim-ready .title-line-reveal.is-visible .desafio-title-line,
+.anim-ready .title-line-reveal.is-visible .objetivos-title-line,
+.anim-ready .title-line-reveal.is-visible .enfoque-title-line,
+.anim-ready .title-line-reveal.is-visible .insights-title-line,
+.anim-ready .title-line-reveal.is-visible .analisis-title-line,
+.anim-ready .title-line-reveal.is-visible .propuesta-title-line,
+.anim-ready .title-line-reveal.is-visible .impacto-title-line,
+.anim-ready .title-line-reveal.is-visible .conclusion-title-line {
+  width: 96px;
+}
+
+/* 6. Funnel bars con width animation (solo con anim-ready) */
+.anim-ready .funnel-stage__bar {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .funnel-stage__bar.is-visible {
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   RESPONSIVE MOBILE — ajustes específicos del case study Santander
+   Deben venir AL FINAL para sobreescribir las reglas base de cada sección.
+   ============================================================ */
+
+/* Process flow (Enfoque): desktop 4 cols → tablet 2x2 → mobile 1 col */
+@media (max-width: 900px) {
+  .process-flow {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
+  }
+  .process-flow::before { display: none; }
+}
+@media (max-width: 540px) {
+  .process-flow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Insights grid: mobile 1 col para que el texto respire */
+@media (max-width: 600px) {
+  .insights-grid { grid-template-columns: 1fr; }
+}
+
+/* Title-lines decorativas en mobile: más cortas (56px) y alineadas al inicio del título
+   en lugar de centradas (cuando el título wrappea a 2-3 líneas se ve mejor al top). */
+@media (max-width: 600px) {
+  .desafio-title-group,
+  .objetivos-title-group,
+  .enfoque-title-group,
+  .insights-title-group,
+  .analisis-title-group,
+  .propuesta-title-group,
+  .impacto-title-group,
+  .conclusion-title-group {
+    align-items: flex-start;
+  }
+  .desafio-title-line,
+  .objetivos-title-line,
+  .enfoque-title-line,
+  .insights-title-line,
+  .analisis-title-line,
+  .propuesta-title-line,
+  .impacto-title-line,
+  .conclusion-title-line {
+    width: 56px;
+    margin-top: 16px; /* baseline alineado con la 1ª línea del h2 (40px * 1.2 / 2 ≈ 24px, ajustado visualmente) */
+  }
+}
+/* También sobreescribir el width de drawing-line cuando is-visible — sino vuelve a 96px */
+@media (max-width: 600px) {
+  .anim-ready .title-line-reveal.is-visible .desafio-title-line,
+  .anim-ready .title-line-reveal.is-visible .objetivos-title-line,
+  .anim-ready .title-line-reveal.is-visible .enfoque-title-line,
+  .anim-ready .title-line-reveal.is-visible .insights-title-line,
+  .anim-ready .title-line-reveal.is-visible .analisis-title-line,
+  .anim-ready .title-line-reveal.is-visible .propuesta-title-line,
+  .anim-ready .title-line-reveal.is-visible .impacto-title-line,
+  .anim-ready .title-line-reveal.is-visible .conclusion-title-line {
+    width: 56px;
+  }
+}
+
+/* Nota: la media query del .case-hero__caso-group está en el bloque <style is:global> (al inicio del archivo)
+   porque el elemento viene del CaseStudyLayout y no es accesible desde el scope local de Astro. */
+.funnel-stage__bar.is-visible:nth-of-type(1) { transition-delay: 0s; }
+
+/* 7. Counter elements — sin animación de aparición previa, solo reveal */
+[data-counter] {
+  display: inline-block;
+}
+
+/* Animaciones siempre activas en este portafolio (intencionales) */
+</style>
+
+<script is:inline>
+  // ============================================================
+  // Animation observer + counter — Sprint 1 + 2 Santander
+  // ============================================================
+  const initSantanderAnimations = () => {
+
+    // Helper — anima un número de 0 al valor objetivo con RAF
+    const animateCounter = (el) => {
+      const targetText = el.dataset.counter || el.textContent.trim();
+      const match = targetText.match(/([+\-−]?)(\d+(?:[.,]\d+)?)\s*(.*)/);
+      if (!match) return;
+      const [, sign, num, suffix] = match;
+      const target = parseFloat(num.replace(',', '.'));
+      const isInt = Number.isInteger(target);
+      const duration = 1200;
+      const start = performance.now();
+      const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+      const tick = (now) => {
+        const t = Math.min((now - start) / duration, 1);
+        const value = target * easeOutCubic(t);
+        const display = isInt ? Math.round(value) : value.toFixed(1).replace('.', ',');
+        el.textContent = `${sign}${display}${suffix}`;
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+
+    // Marca todos los grids reveal y los hijos como .reveal
+    const revealGroups = [
+      '.challenge-list', '.stats-panel', '.objectives-grid', '.process-flow',
+      '.insights-grid', '.analisis-funnel-card', '.analisis-mini-cards',
+      '.propuesta-screens', '.propuesta-pillars', '.impacto-stats'
+    ];
+    revealGroups.forEach((sel) => {
+      document.querySelectorAll(sel).forEach((parent) => {
+        Array.from(parent.children).forEach((child) => child.classList.add('reveal'));
+      });
+    });
+
+    // Marca title-groups como reveal
+    document.querySelectorAll(
+      '.desafio-title-group, .objetivos-title-group, .enfoque-title-group, .insights-title-group, .analisis-title-group, .propuesta-title-group, .impacto-title-group, .conclusion-title-group'
+    ).forEach((el) => el.classList.add('title-line-reveal'));
+
+    // Progressive enhancement: solo activar animaciones si IO está disponible
+    if (!('IntersectionObserver' in window)) return;
+    document.body.classList.add('anim-ready');
+
+    const animatableSelector = '.reveal, .title-line-reveal, .funnel-stage__bar, [data-counter]';
+    const animatables = document.querySelectorAll(animatableSelector);
+
+    // IntersectionObserver — añade .is-visible al entrar al viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+
+        // Si tiene data-counter, anima el número
+        if (entry.target.matches('[data-counter]')) {
+          animateCounter(entry.target);
+        }
+
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+
+    animatables.forEach((el) => observer.observe(el));
+
+    // Fallback: forzar visibilidad después de 1.5s si IO no disparó
+    setTimeout(() => {
+      animatables.forEach((el) => {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
+          if (el.matches('[data-counter]')) animateCounter(el);
+          observer.unobserve(el);
+        }
+      });
+    }, 1500);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSantanderAnimations);
+  } else {
+    initSantanderAnimations();
+  }
+</script>

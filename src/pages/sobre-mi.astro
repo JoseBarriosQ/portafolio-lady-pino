@@ -1,0 +1,696 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+
+// Credenciales EmailJS (configuradas en .env — ver .env.example para setup)
+const EMAILJS_PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY || '';
+const EMAILJS_SERVICE_ID = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID || '';
+const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID || '';
+---
+
+<BaseLayout
+  title="Sobre mí — Lady Pino"
+  description="Especialista en producto digital con más de 7 años de experiencia diseñando experiencias centradas en las personas."
+  activePage="sobre-mi"
+>
+  <div class="sobre-mi">
+    <div class="container">
+      <a href="/" class="back-link">
+        <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M34 6H2M2 6L8 1M2 6L8 11" stroke="#A4665C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Volver atrás
+      </a>
+      <div class="page-title-group">
+        <span class="page-title-line"></span>
+        <h1 class="page-title">Sobre mi</h1>
+      </div>
+    </div>
+
+    <!-- Bio principal -->
+    <section class="bio container">
+      <div class="bio__photo">
+        <img src="/assets/LadySobremi.png" alt="Lady Pino" />
+      </div>
+      <div class="bio__text">
+        <h2>Un poco sobre mi</h2>
+        <p>
+          Especialista en producto digital con más de 7 años de experiencia diseñando
+          experiencias centradas en las personas. Me enfoco en transformar ideas en
+          soluciones claras, funcionales y alineadas a objetivos de negocio. Trabajo de forma
+          colaborativa para crear productos que no solo se vean bien, sino que funcionen,
+          escalen y generen resultados medibles.
+        </p>
+        <a href="https://www.figma.com/proto/UnUkmw6aAnENqeVUqfRF4y/CV-Lady-Pino-Ramirez?node-id=1-2&viewport=335%2C42%2C0.87&t=rcBhHBZHLQd1dtan-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="btn-outline" target="_blank" rel="noopener noreferrer">Ver mi CV</a>
+      </div>
+    </section>
+
+    <!-- Más sobre mí -->
+    <section class="bio-extra container">
+      <h2>Un poco más sobre mi</h2>
+      <p>Me mueven los detalles, los patrones y entender qué hay detrás de cada decisión.</p>
+      <p>Disfruto trabajar en equipo, escuchar y construir en conjunto. Creo en el diseño como una herramienta estratégica, donde cada decisión tiene un propósito.</p>
+      <p>Fuera de lo digital, valoro los espacios que me permiten recargar: la lectura, la naturaleza y el tiempo con mi familia, que es mi base.</p>
+      <p>También soy fan del café y del anime, dos mundos que reflejan cómo observo y analizo historias, procesos y experiencias.</p>
+    </section>
+  </div>
+
+  <!-- CTA + Formulario + Botonera -->
+  <section class="cta-contact" id="contacto">
+    <div class="cta-contact__inner">
+      <h2 class="cta-contact__title">Diseñemos algo que realmente funcione</h2>
+      <p class="cta-contact__subtitle">Cuéntame tu desafío y trabajemos en una solución centrada en las personas y en resultados.</p>
+
+      <form class="contact__form" id="contact-form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo" required />
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntame brevemente tu proyecto" rows="5" required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">Enviar</button>
+        </div>
+        <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
+      </form>
+
+      <div class="cta-contact__icons">
+        <a href="https://www.linkedin.com/in/ladypino" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Lady Pino">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/56957625792" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Lady Pino">
+          <img src="/assets/wspIcon.png" alt="WhatsApp" width="24" height="24" />
+        </a>
+        <a href="https://www.figma.com/proto/UnUkmw6aAnENqeVUqfRF4y/CV-Lady-Pino-Ramirez?node-id=1-2&viewport=335%2C42%2C0.87&t=rcBhHBZHLQd1dtan-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" rel="noopener noreferrer" aria-label="Ver CV de Lady Pino">
+          <img src="/assets/removalIcon.png" alt="CV" width="24" height="24" />
+        </a>
+      </div>
+      <p class="cta-contact__credits">Diseñado por Lady Pino 2026 ❤️</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  body:has(.sobre-mi) .navbar {
+    background-color: #ffffff;
+  }
+</style>
+
+<style>
+.sobre-mi {
+  padding-top: 48px;
+  background-color: #ffffff;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+  margin-bottom: 16px;
+  transition: opacity 0.2s;
+}
+.back-link:hover { opacity: 0.7; }
+
+.page-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.page-title-line {
+  flex-shrink: 0;
+  width: 219px;
+  height: 2px;
+  background-color: #A4665C;
+  border-radius: 2px;
+}
+.page-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+
+/* Bio */
+.bio {
+  display: grid;
+  grid-template-columns: minmax(400px, 550px) 1fr;
+  gap: clamp(80px, 10vw, 180px);
+  align-items: start;
+  padding-bottom: 64px;
+}
+.bio__photo img {
+  width: 100%;
+  max-width: 550px;
+  height: 700px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 24px;
+  display: block;
+}
+.bio__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.bio__text .btn-outline {
+  font-size: 16px;
+  padding: 8px 20px;
+  border-width: 1px;
+}
+.bio__text h2 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+.bio__text p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #766F6D;
+}
+
+/* Bio extra */
+.bio-extra {
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.bio-extra h2 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+  margin-bottom: 8px;
+}
+.bio-extra p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: #766F6D;
+}
+
+/* CTA + Contact */
+.cta-contact {
+  background-color: var(--color-bg);
+  padding: 80px 40px;
+  text-align: center;
+}
+.cta-contact__inner {
+  max-width: min(720px, 92vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.cta-contact__title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+.cta-contact__subtitle {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+  color: #766F6D;
+  max-width: 900px;
+}
+.contact__form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  margin-top: 16px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #A4665C;
+}
+.form-group input,
+.form-group textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #A4665C;
+  padding: 12px 16px;
+  border: 1px solid #A4665C;
+  border-radius: 8px;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+.form-group textarea {
+  line-height: 1.5;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #8B4F46;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  color: rgba(164, 102, 92, 0.5);
+}
+.form-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.form-submit .btn-primary {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  background-color: #A4665C;
+}
+.cta-contact__icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+}
+.cta-contact__icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: #A4665C;
+  border-radius: 12px;
+  color: #fff;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.cta-contact__icons a:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+.cta-contact__icons img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.cta-contact__icons svg {
+  width: 28px;
+  height: 28px;
+}
+.cta-contact__credits {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 12px;
+}
+
+/* === Responsive === */
+/* Mobile: solo ajustes de layout, NO de tipografía (mantenemos los tamaños desktop por pedido de José).
+   Si el texto wrappea más líneas, está OK — la jerarquía visual se preserva. */
+@media (max-width: 900px) {
+  .sobre-mi {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  .page-title-line { width: 96px; }
+  .page-title-group { margin-bottom: 32px; }
+
+  /* Disolver .bio para reordenar foto + texto como hijos directos de .sobre-mi:
+     foto va ENTRE el texto "Un poco sobre mi" y "Un poco más sobre mi" en mobile. */
+  .bio {
+    display: contents;
+  }
+  .bio__text {
+    order: 2;
+    padding: 0 40px 32px;
+    max-width: min(1600px, 92vw);
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .bio__photo {
+    order: 3;
+    padding: 0 40px 32px;
+    max-width: min(1600px, 92vw);
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .bio-extra {
+    order: 4;
+  }
+  .bio__photo img {
+    height: auto;
+    aspect-ratio: 4/5;
+    max-width: 100%;
+  }
+
+  .cta-contact { padding: 56px 24px; }
+  .cta-contact__icons a { width: 44px; height: 44px; }
+  .cta-contact__icons img,
+  .cta-contact__icons svg { width: 22px; height: 22px; }
+}
+
+@media (max-width: 600px) {
+  .page-title-line { width: 64px; }
+  .cta-contact { padding: 40px 16px; }
+}
+
+/* ============================================================
+   ANIMATIONS — Sobre mí (reveal + hovers refinados)
+   ============================================================ */
+
+/* 1. Back-link hover refinado */
+.back-link {
+  transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+.back-link:hover {
+  opacity: 1;
+  transform: translateX(-4px);
+}
+
+/* 2. Drawing line del título de página
+   Patrón progressive-enhancement: SOLO cuando body tiene .anim-ready (lo agrega el script al cargar)
+   se ocultan los elementos para hacer fade-in. Si JS falla, todo es visible por default. */
+.anim-ready .page-title-line {
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+}
+.anim-ready .page-title-group.is-visible .page-title-line {
+  width: 219px;
+}
+@media (max-width: 900px) {
+  .anim-ready .page-title-group.is-visible .page-title-line { width: 96px; }
+}
+@media (max-width: 600px) {
+  .anim-ready .page-title-group.is-visible .page-title-line { width: 64px; }
+}
+
+/* 3. Page-title fade-in */
+.anim-ready .page-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .page-title-group.is-visible .page-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. Bio section — fade-in con stagger (foto + texto) */
+.anim-ready .bio__photo,
+.anim-ready .bio__text > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .bio.is-visible .bio__photo { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.anim-ready .bio.is-visible .bio__text > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.anim-ready .bio.is-visible .bio__text > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+.anim-ready .bio.is-visible .bio__text > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+
+/* 5. Foto bio hover sutil */
+.bio__photo img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.5s ease;
+  box-shadow: 0 6px 28px rgba(164, 102, 92, 0.10);
+}
+.bio__photo img:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 14px 40px rgba(164, 102, 92, 0.18);
+}
+
+/* 6. Botón "Ver mi CV" refinado */
+.bio__text .btn-outline {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.bio__text .btn-outline:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(164, 102, 92, 0.20);
+}
+
+/* 7. Bio-extra fade-in con stagger por párrafo (solo si JS cargó las animaciones) */
+.anim-ready .bio-extra > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .bio-extra.is-visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.anim-ready .bio-extra.is-visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.anim-ready .bio-extra.is-visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+.anim-ready .bio-extra.is-visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+.anim-ready .bio-extra.is-visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+
+/* 8. CTA Contact — fade-in stagger (solo si JS cargó las animaciones) */
+.anim-ready .cta-contact__title,
+.anim-ready .cta-contact__subtitle,
+.anim-ready .contact__form,
+.anim-ready .cta-contact__icons,
+.anim-ready .cta-contact__credits {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-ready .cta-contact.is-visible .cta-contact__title { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.anim-ready .cta-contact.is-visible .cta-contact__subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.anim-ready .cta-contact.is-visible .contact__form { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+.anim-ready .cta-contact.is-visible .cta-contact__icons { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+.anim-ready .cta-contact.is-visible .cta-contact__credits { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+
+/* 9. Inputs focus glow */
+.form-group input,
+.form-group textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(164, 102, 92, 0.15);
+}
+
+/* 10. Botón Enviar refinado */
+.form-submit .btn-primary {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.form-submit .btn-primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(164, 102, 92, 0.35);
+}
+
+/* 11. Iconos sociales — hover scale + shadow más pronunciado */
+.cta-contact__icons a {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease, opacity 0.2s ease;
+}
+.cta-contact__icons a:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(164, 102, 92, 0.30);
+  opacity: 1;
+}
+
+/* ============================================================
+   FORM FEEDBACK — EmailJS success/error states
+   ============================================================ */
+.form-feedback {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+  display: none;
+  text-align: left;
+}
+.form-feedback--success {
+  display: block;
+  background-color: rgba(34, 197, 94, 0.10);
+  color: #15803D;
+  border: 1px solid rgba(34, 197, 94, 0.30);
+  animation: feedback-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.form-feedback--error {
+  display: block;
+  background-color: rgba(239, 68, 68, 0.10);
+  color: #B91C1C;
+  border: 1px solid rgba(239, 68, 68, 0.30);
+  animation: feedback-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes feedback-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón deshabilitado durante el envío */
+.form-submit .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+</style>
+
+<!-- SDK EmailJS (CDN, v4) — necesario para el envío del formulario -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" is:inline></script>
+
+<!-- Handler del formulario de contacto con EmailJS -->
+<script is:inline define:vars={{ EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID }}>
+  const initContactForm = () => {
+    if (!window.emailjs) {
+      // SDK aún no cargado → reintentar
+      setTimeout(initContactForm, 50);
+      return;
+    }
+
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('form-feedback');
+    if (!form || !feedback) return;
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.textContent : 'Enviar';
+
+    // Si faltan claves: avisar en consola sin romper la página
+    const hasCredentials = !!(EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID);
+    if (!hasCredentials) {
+      console.warn('[EmailJS] Credenciales no configuradas. Completar PUBLIC_EMAILJS_* en .env (ver .env.example)');
+    } else {
+      window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Reset visual del feedback antes de cada intento
+      feedback.className = 'form-feedback';
+      feedback.textContent = '';
+
+      if (!hasCredentials) {
+        feedback.className = 'form-feedback form-feedback--error';
+        feedback.textContent = 'El formulario no está configurado todavía. Por ahora puedes escribirme por LinkedIn o WhatsApp.';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      const data = new FormData(form);
+      const params = {
+        from_name: data.get('nombre'),
+        from_email: data.get('email'),
+        message: data.get('mensaje'),
+      };
+
+      try {
+        await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+        feedback.className = 'form-feedback form-feedback--success';
+        feedback.textContent = '✓ Mensaje enviado, te respondo pronto';
+        form.reset();
+      } catch (err) {
+        feedback.className = 'form-feedback form-feedback--error';
+        feedback.textContent = '✗ No pudimos enviar el mensaje. Intenta de nuevo o escríbeme por LinkedIn.';
+        console.error('[EmailJS] Error enviando el mensaje:', err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initContactForm);
+  } else {
+    initContactForm();
+  }
+</script>
+
+<script is:inline>
+  // ============================================================
+  // Animation observer — Sobre mí
+  // ============================================================
+  const initSobreMiAnimations = () => {
+    // Activar animaciones SOLO si el navegador soporta IntersectionObserver
+    // y JS está corriendo. Sin esto, el CSS deja todo visible por default.
+    if (!('IntersectionObserver' in window)) return;
+    document.body.classList.add('anim-ready');
+
+    const targets = document.querySelectorAll('.page-title-group, .bio, .bio-extra, .cta-contact');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+
+    targets.forEach((el) => observer.observe(el));
+
+    // Fallback: si después de 1.5s algún elemento sigue invisible (IO no disparó por
+    // viewport pequeño, scroll bloqueado o similar), forzamos visibilidad para que
+    // el usuario nunca vea sección en blanco.
+    setTimeout(() => {
+      targets.forEach((el) => {
+        if (!el.classList.contains('is-visible')) {
+          el.classList.add('is-visible');
+          observer.unobserve(el);
+        }
+      });
+    }, 1500);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSobreMiAnimations);
+  } else {
+    initSobreMiAnimations();
+  }
+</script>

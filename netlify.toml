@@ -1,0 +1,39 @@
+# Configuración Netlify — Portafolio Lady Pino
+# Doc: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Node 20 LTS — Astro 4 requiere >= 18.17.1, Node 20 es la versión LTS estable
+  NODE_VERSION = "20"
+
+# Variables EmailJS — configurarlas en el Dashboard de Netlify:
+# Site settings → Environment variables → Add a variable
+# (no se commitean por seguridad; aquí solo documentamos los nombres)
+#
+#   PUBLIC_EMAILJS_PUBLIC_KEY   = "..."  (Account → General → Public Key)
+#   PUBLIC_EMAILJS_SERVICE_ID   = "service_..."  (Email Services)
+#   PUBLIC_EMAILJS_TEMPLATE_ID  = "template_..." (Email Templates)
+
+# Headers de seguridad recomendados para producción
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache largo para assets versionados (Astro les pone hash en el nombre)
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache moderado para imágenes
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"

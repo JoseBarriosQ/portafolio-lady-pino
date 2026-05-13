@@ -1,0 +1,43 @@
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# environment variables
+.env
+.env.production
+.env.local
+
+# editor / IDE
+.vscode/
+.idea/
+
+# Claude Code / agente local — config interna que no se versiona
+.claude/
+CLAUDE.md
+barry-skills/
+generate-doc.js
+Plan-Implementacion-Portafolio-Lady.docx
+Plan-Implementacion-Portafolio-Lady.pdf
+assetsLady/
+
+# Netlify CLI cache (no necesario en repo, Netlify lo regenera al deploy)
+.netlify/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# preview server temporal (creado solo para validar build local, no se versiona)
+.preview-server.cjs

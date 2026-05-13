@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" role="img" aria-label="Lady Pino">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    </style>
+  </defs>
+  <text
+    x="8"
+    y="46"
+    font-family="'Great Vibes', cursive"
+    font-size="46"
+    fill="#8B3A2A"
+  >Lady Pino</text>
+</svg>
