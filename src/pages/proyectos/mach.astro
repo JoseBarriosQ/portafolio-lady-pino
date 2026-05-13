@@ -2061,6 +2061,7 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
     if (!('IntersectionObserver' in window)) return;
     document.body.classList.add('anim-ready');
 
+    // Preparar elementos con clase reveal (síncrono, antes del paint)
     const revealGroups = [
       '.contexto-cards', '.contexto-stats', '.fricciones-grid',
       '.objetivos-grid', '.proceso-flow', '.insights-grid',
@@ -2076,26 +2077,30 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
       '.contexto-title-group, .fricciones-title-group, .objetivos-title-group, .proceso-title-group, .insights-title-group, .redisenio-title-group, .mejoras-title-group, .impacto-mach-title-group, .sistema-title-group, .conclusion-mach-title-group'
     ).forEach((el) => el.classList.add('title-line-reveal'));
 
-    const targets = document.querySelectorAll('.reveal, .title-line-reveal');
+    // Doble RAF: garantiza primer paint con opacity:0 antes de activar el observer
+    // (en producción el JS corría tan rápido que las animaciones se saltaban).
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const targets = document.querySelectorAll('.reveal, .title-line-reveal');
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
 
-    targets.forEach((el) => observer.observe(el));
+      targets.forEach((el) => observer.observe(el));
 
-    setTimeout(() => {
-      targets.forEach((el) => {
-        if (!el.classList.contains('is-visible')) {
-          el.classList.add('is-visible');
-          observer.unobserve(el);
-        }
-      });
-    }, 1500);
+      setTimeout(() => {
+        targets.forEach((el) => {
+          if (!el.classList.contains('is-visible')) {
+            el.classList.add('is-visible');
+            observer.unobserve(el);
+          }
+        });
+      }, 1500);
+    }));
   };
 
   if (document.readyState === 'loading') {

@@ -448,33 +448,36 @@ import LogoLady from '../components/LogoLady.astro';
   // Animation observer — Home (hero + projects)
   // ============================================================
   const initHomeAnimations = () => {
-    // Progressive enhancement: las animaciones reveal solo aplican si IntersectionObserver
-    // está disponible y JS corre OK. Si JS falla, body NO tiene .anim-ready y el contenido
-    // se ve normal sin opacity: 0 inicial (definido en CSS con .anim-ready prefix).
     if (!('IntersectionObserver' in window)) return;
     document.body.classList.add('anim-ready');
 
-    const targets = document.querySelectorAll('.hero, .hero__title-group, .projects, .project-card');
+    // Doble requestAnimationFrame: garantiza que el browser pinte el estado inicial
+    // (opacity:0) ANTES de que el observer dispare .is-visible. Sin esto, en producción
+    // (HTML estático + JS rápido + CDN) las animaciones se completaban antes del primer
+    // paint y no se percibían.
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const targets = document.querySelectorAll('.hero, .hero__title-group, .projects, .project-card');
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
 
-    targets.forEach((el) => observer.observe(el));
+      targets.forEach((el) => observer.observe(el));
 
-    // Fallback: si IO no dispara en 1.5s, forzar visibilidad
-    setTimeout(() => {
-      targets.forEach((el) => {
-        if (!el.classList.contains('is-visible')) {
-          el.classList.add('is-visible');
-          observer.unobserve(el);
-        }
-      });
-    }, 1500);
+      // Fallback: si IO no dispara en 1.5s, forzar visibilidad
+      setTimeout(() => {
+        targets.forEach((el) => {
+          if (!el.classList.contains('is-visible')) {
+            el.classList.add('is-visible');
+            observer.unobserve(el);
+          }
+        });
+      }, 1500);
+    }));
   };
 
   if (document.readyState === 'loading') {

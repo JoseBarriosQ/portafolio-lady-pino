@@ -658,34 +658,35 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID || '';
   // Animation observer — Sobre mí
   // ============================================================
   const initSobreMiAnimations = () => {
-    // Activar animaciones SOLO si el navegador soporta IntersectionObserver
-    // y JS está corriendo. Sin esto, el CSS deja todo visible por default.
     if (!('IntersectionObserver' in window)) return;
     document.body.classList.add('anim-ready');
 
-    const targets = document.querySelectorAll('.page-title-group, .bio, .bio-extra, .cta-contact');
+    // Doble RAF: garantiza primer paint con opacity:0 antes de disparar transiciones
+    // (en producción el JS corre tan rápido que las animaciones se saltaban).
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const targets = document.querySelectorAll('.page-title-group, .bio, .bio-extra, .cta-contact');
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
 
-    targets.forEach((el) => observer.observe(el));
+      targets.forEach((el) => observer.observe(el));
 
-    // Fallback: si después de 1.5s algún elemento sigue invisible (IO no disparó por
-    // viewport pequeño, scroll bloqueado o similar), forzamos visibilidad para que
-    // el usuario nunca vea sección en blanco.
-    setTimeout(() => {
-      targets.forEach((el) => {
-        if (!el.classList.contains('is-visible')) {
-          el.classList.add('is-visible');
-          observer.unobserve(el);
-        }
-      });
-    }, 1500);
+      // Fallback: si IO no dispara en 1.5s, forzar visibilidad para que el usuario
+      // nunca vea sección en blanco.
+      setTimeout(() => {
+        targets.forEach((el) => {
+          if (!el.classList.contains('is-visible')) {
+            el.classList.add('is-visible');
+            observer.unobserve(el);
+          }
+        });
+      }, 1500);
+    }));
   };
 
   if (document.readyState === 'loading') {

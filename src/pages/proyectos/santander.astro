@@ -1327,40 +1327,40 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
       '.desafio-title-group, .objetivos-title-group, .enfoque-title-group, .insights-title-group, .analisis-title-group, .propuesta-title-group, .impacto-title-group, .conclusion-title-group'
     ).forEach((el) => el.classList.add('title-line-reveal'));
 
-    // Progressive enhancement: solo activar animaciones si IO está disponible
     if (!('IntersectionObserver' in window)) return;
     document.body.classList.add('anim-ready');
 
-    const animatableSelector = '.reveal, .title-line-reveal, .funnel-stage__bar, [data-counter]';
-    const animatables = document.querySelectorAll(animatableSelector);
+    // Doble RAF: garantiza primer paint con opacity:0 antes de disparar transiciones
+    // (en producción las animaciones se saltaban por timing del JS rápido).
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const animatableSelector = '.reveal, .title-line-reveal, .funnel-stage__bar, [data-counter]';
+      const animatables = document.querySelectorAll(animatableSelector);
 
-    // IntersectionObserver — añade .is-visible al entrar al viewport
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
 
-        // Si tiene data-counter, anima el número
-        if (entry.target.matches('[data-counter]')) {
-          animateCounter(entry.target);
-        }
+          if (entry.target.matches('[data-counter]')) {
+            animateCounter(entry.target);
+          }
 
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
 
-    animatables.forEach((el) => observer.observe(el));
+      animatables.forEach((el) => observer.observe(el));
 
-    // Fallback: forzar visibilidad después de 1.5s si IO no disparó
-    setTimeout(() => {
-      animatables.forEach((el) => {
-        if (!el.classList.contains('is-visible')) {
-          el.classList.add('is-visible');
-          if (el.matches('[data-counter]')) animateCounter(el);
-          observer.unobserve(el);
-        }
-      });
-    }, 1500);
+      setTimeout(() => {
+        animatables.forEach((el) => {
+          if (!el.classList.contains('is-visible')) {
+            el.classList.add('is-visible');
+            if (el.matches('[data-counter]')) animateCounter(el);
+            observer.unobserve(el);
+          }
+        });
+      }, 1500);
+    }));
   };
 
   if (document.readyState === 'loading') {
