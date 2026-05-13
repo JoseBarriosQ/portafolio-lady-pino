@@ -2092,6 +2092,8 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
 
       targets.forEach((el) => observer.observe(el));
 
+      // Fallback de seguridad: 8s (antes 1.5s — disparaba todos los reveals
+      // automáticamente antes de que el usuario pudiera scrollear).
       setTimeout(() => {
         targets.forEach((el) => {
           if (!el.classList.contains('is-visible')) {
@@ -2099,7 +2101,7 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
             observer.unobserve(el);
           }
         });
-      }, 1500);
+      }, 8000);
     }));
   };
 

@@ -1351,6 +1351,8 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
 
       animatables.forEach((el) => observer.observe(el));
 
+      // Fallback de seguridad: 8s (antes 1.5s — completaba reveals automáticamente
+      // antes de que el usuario tuviera tiempo de scrollear).
       setTimeout(() => {
         animatables.forEach((el) => {
           if (!el.classList.contains('is-visible')) {
@@ -1359,7 +1361,7 @@ import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
             observer.unobserve(el);
           }
         });
-      }, 1500);
+      }, 8000);
     }));
   };
 

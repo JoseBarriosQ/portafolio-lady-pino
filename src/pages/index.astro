@@ -468,7 +468,9 @@ import LogoLady from '../components/LogoLady.astro';
 
       targets.forEach((el) => observer.observe(el));
 
-      // Fallback: si IO no dispara en 1.5s, forzar visibilidad
+      // Fallback de seguridad: solo dispara si el IO falla por completo (8s).
+      // Antes era 1.5s pero eso completaba todas las animaciones automáticamente
+      // antes de que el usuario pudiera scrollear y ver el reveal en cada sección.
       setTimeout(() => {
         targets.forEach((el) => {
           if (!el.classList.contains('is-visible')) {
@@ -476,7 +478,7 @@ import LogoLady from '../components/LogoLady.astro';
             observer.unobserve(el);
           }
         });
-      }, 1500);
+      }, 8000);
     }));
   };
 

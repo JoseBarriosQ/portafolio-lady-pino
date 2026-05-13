@@ -676,8 +676,8 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID || '';
 
       targets.forEach((el) => observer.observe(el));
 
-      // Fallback: si IO no dispara en 1.5s, forzar visibilidad para que el usuario
-      // nunca vea sección en blanco.
+      // Fallback de seguridad: 8s (antes 1.5s, pero completaba animaciones
+      // automáticamente antes de que el usuario pudiera scrollear).
       setTimeout(() => {
         targets.forEach((el) => {
           if (!el.classList.contains('is-visible')) {
@@ -685,7 +685,7 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID || '';
             observer.unobserve(el);
           }
         });
-      }, 1500);
+      }, 8000);
     }));
   };
 
